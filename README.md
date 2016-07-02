@@ -131,8 +131,8 @@ aplication/
 │       ├── *.ttf
 │       ├── *.woff
 │       └── *.eot
-├── controls/
-│   └── *-controler.js
+├── controllers/
+│   └── *-controller.js
 ├── services/
 │   └── logger.js
 ├── tests/
