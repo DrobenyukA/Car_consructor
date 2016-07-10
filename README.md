@@ -64,6 +64,7 @@
   "color_name": "Pacific",
   "color_value": "#0000ff",
   "model_id": 1,
+  "compl_id": 1,
   "price": 0
 }
 ```
