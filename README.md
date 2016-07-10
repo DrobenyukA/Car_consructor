@@ -44,6 +44,7 @@
   "gearbox_type": "мех.",
   "gearbox_steps": "5-cт.",
   "model_id": 1,
+  "compl_id": 1,
   "price": 396832
 }
 ```
