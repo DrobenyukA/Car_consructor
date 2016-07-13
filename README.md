@@ -60,12 +60,20 @@
 Файл _colors.json_:
 ``` JSON
 {
-  "color_id": 1,
-  "color_name": "Pacific",
-  "color_value": "#0000ff",
-  "model_id": 1,
-  "compl_id": 1,
-  "price": 0
+    "color_id": 1,
+    "color_name": "Pacific",
+    "color_value": "#0000ff",
+    "color_type": "Глянець",
+    "cars": [
+      {
+        "model_id": 1,
+        "price": 0
+      },
+      {
+        "model_id": 2,
+        "price": 0
+      }
+    ]
 }
 ```
 Файл _options.json_:
