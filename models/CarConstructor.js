@@ -2,8 +2,8 @@
  * Created by drobenyuk on 09.07.16.
  */
 
-var fs = require('fs');
-var logger = require('./../services/Logger');
+var fs     = require('fs'),
+    logger = require('./../services/Logger');
 
 module.exports = (function(){
 

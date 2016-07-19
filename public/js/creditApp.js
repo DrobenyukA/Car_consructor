@@ -58,12 +58,15 @@ $(function(){
                    + yearsVal + ' '+ yearsDescr +
                    '</option>';
            }
+           
            $('select[name="period"]').html(periods);
        };
 
        var setInterest = function(data){
-           $('input[name="interest"]').attr('data-id', data[0].interests_id)
-               .attr('value', data[0].interests_value);
+           if(data){
+               $('.interest').attr('data-id', data[0].interests_id)
+                   .html(data[0].interests_value);
+           }
        };
 
        return{

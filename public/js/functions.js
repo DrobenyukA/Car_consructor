@@ -62,37 +62,40 @@ function setOptions(){
 
 function goNext(){
     var credit = '<button onclick="calcCredit()">Credit</button>',
-        saveCar = '<button onclick="saveCar()"> Save Car</button>';
-    $('#next-steps').html(credit + saveCar);
+        saveCar = '<input type="submit" value="Save Car"/>';
+    $('#car-constructor div').html(saveCar);
+    $('#next-steps').html(credit);
     changePrice();
 }
 
-
 function calcCredit(){
     $.ajax('/bank').done(window.CreditApp.setBanks);
-
-    $('select[name="payment"]').html('').css('display', 'inline-block');
-    $('select[name="period"]').html('').css('display', 'none');
+    $('select[name="banks"]').css('display', 'inline-block');
 }
 
 function setPayments(){
     var bankId = $('select[name="banks"]').val();
     $.ajax('/payments', { data: {bankId: bankId} }).done(window.CreditApp.setPayments);
 
-    $('select[name="period"]').html('').css('display', 'inline-block');
+    $('select[name="payment"]').html('').css('display', 'inline-block');
+    $('select[name="period"]').html('').css('display', 'none');
+    $('.interest').html('').css('display', 'none');
 }
 
 function setPeriods(){
     var bankId = $('select[name="banks"]').val();
         
     $.ajax('/period', { data: {bankId: bankId} }).done(window.CreditApp.setPeriods);
+    $('select[name="period"]').html('').css('display', 'inline-block');
+    $('.interest').html('').css('display', 'none');
 
 }
 
 function getInterest(){
-    var bankId    = $('select[name="banks"]').val(),
-        paymentId = $('select[name="payment"]').val(),
-        periodId  = $('select[name="period"]').val();
+    var bankId     = $('select[name="banks"]').val(),
+        paymentId  = $('select[name="payment"]').val(),
+        periodId   = $('select[name="period"]').val(),
+        calcButton = '<button onclick="calcCredit()">Calc Credit</button>';
     $.ajax('/interest', {
         data: {
             bankId: bankId,
@@ -100,11 +103,10 @@ function getInterest(){
             periodId: periodId
         }
     }).done(window.CreditApp.setInterest);
-    
+
+    $('.interest').html('').css('display', 'inline-block');
+    $('#final-steps').html(calcButton);
 }
-function saveCar(){
-    var car = {};
-    
-    console.log(car)
-}
+
+
 

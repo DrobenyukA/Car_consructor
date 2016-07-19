@@ -1,0 +1,1739 @@
+﻿
+.newtablet #b2b_image{
+    display: none;
+}
+
+.newtablet div.cc-root.web-size div.dialog.hover-dialog div.dialog-inner {
+    width: 380px;
+}
+
+
+.newtablet.tablet div.cc-root.web-size div.ci-top-header {
+    border-bottom: none;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content-header {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile {
+    background:none;
+    border: 1px solid #CCCCCC;
+} 
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile .tile-container{
+    background: #f2f2f2;
+    position: relative;
+    width: 110px;
+    height: 115px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.active .tile-container{
+    border: 2px solid #9f9f9f;
+     background: #e8f4e4;
+    width: 106px;
+    z-index: 10;
+    height: 111px;
+}
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.equipment-tile.active div.price-label{
+    top: 83px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.active .tile-container div.equipment-label{
+    top: -2px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.wheel-picker div.wheels-to-pick a.wheel-to-pick {
+    border: 1px solid #CCCCCC;
+    background-color: transparent;
+}
+
+    
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.equipment-tile div.price-label {
+    border-top: none;
+    line-height: 18px;
+    border-top: 1px solid #CCCCCC;
+    width: 90px;
+    top: 85px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+    .newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile div.tile-label {
+        /*background: none repeat scroll 0 0 #e8f4e4;*/
+        height: 65px;
+        padding-top: 20px;
+        position: absolute;
+        width: 110px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.active div.active-ico {
+    z-index: 11;
+}
+
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.equipment-tile div.info-ico {
+    background: url("images/new-tablet-design/large-info-icon.png") no-repeat center bottom #ffffff;
+    border-top: none;
+    height: 45px;
+    width:110px;
+    /*top: 0px;*/
+    z-index: 3;
+}
+
+.newtablet .ci-top-header {
+    background-color: #ffffff;
+}
+
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.model-label a.home {
+    display:none;
+}
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.model-label {
+    z-index: 5;
+    width: 1024px;
+    border-bottom: none;
+    /*background: url("images/new-tablet-design/menu-box-li-border.gif") no-repeat 200px center;*/
+    
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.model-label div.model-label-padding {
+    left: 16px;
+    background: url("images/new-tablet-design/info-small.png") no-repeat right 10px;
+}
+
+.newtablet .menu-box {
+    float: right;
+    z-index: 1;
+    width: 630px;
+    height: 46px;
+    text-align: right;
+    font-family: 'SkodaProBold',​Verdana,​Arial,​sans-serif;
+}
+
+
+    .newtablet .menu-box li {
+        float: left;
+        width: 100px;        
+        background: url("images/new-tablet-design/menu-box-li-border.gif") no-repeat left center;        
+        font-size: 14px;
+        display: table;  
+    }
+
+    .newtablet .menu-box li a {
+        color: #ffffff;
+        height: 46px;
+        text-align: center;
+        display:table-cell;
+        vertical-align:middle;
+        cursor: pointer;
+        padding: 0 5px;
+        text-align: center;
+        overflow: hidden;
+        line-height: 110%;
+    }
+
+        .newtablet .menu-box li a.blank {
+            cursor: default;
+        }
+
+
+    .newtablet .menu-box li.choose-view a, .newtablet .menu-box li.choose-background a {
+        background: url("images/new-tablet-design/menu-arrow-down.gif") no-repeat 120px center;
+        cursor: pointer;
+        text-align: left;
+        padding-left: 20px;
+        width: 150px;        
+    }
+
+        .newtablet .menu-box li.choose-background a {
+            width: 140px !important;
+        }
+
+        .newtablet .menu-box .choose-view.active a, .newtablet .menu-box li.choose-background.active a {
+            background: url("images/new-tablet-design/menu-arrow-up.gif") no-repeat 120px center;
+        }
+
+    .newtablet .menu-box li.choose-view, .newtablet .menu-box li.choose-view li {
+        width: 165px;      
+    }
+
+    .newtablet .menu-box li.choose-background, .newtablet .menu-box li.choose-background li {
+        width: 165px;    
+        height: 46px;  
+    }
+
+        .newtablet .menu-box li.sub-menu ul {
+            position: absolute;
+            right: 164px;
+            z-index: 10;
+            width: 165px;
+            visibility:hidden;
+            top: 37px;
+            padding-top: 8px;
+            border-right: 1px solid #9f9f9f;
+            background:url("images/new-tablet-design/menu-box-li-border.gif") repeat-y scroll left center #000000
+        }
+
+        .newtablet .menu-box li.sub-menu a {
+            z-index:21;
+            position: relative;
+        }
+            .newtablet .menu-box li.sub-menu.active ul {
+                visibility:visible;
+            }
+
+        .newtablet .menu-box li.sub-menu ul li {
+            border-bottom: 1px solid #9f9f9f;
+            border-top: 1px solid #9f9f9f;
+        }
+
+            .newtablet .menu-box li.sub-menu ul li.disabled {
+                /*display: none;*/
+                color: #9f9f9f;
+            }
+
+            .newtablet .menu-box li.sub-menu ul li.disabled a{
+                /*display: none;*/
+                color: #9f9f9f;
+            }
+
+            .newtablet .menu-box li.sub-menu.choose-background ul {
+                width: 165px;
+                border-right: none;
+                right: 0;
+            }
+
+    .newtablet .menu-box li.sub-menu ul li a {
+        background-image: none !important;
+    }
+
+        .newtablet .menu-box li.choose-background .background-on {
+            background: url("images/new-tablet-design/menu-background-on-white.png") no-repeat 120px center;
+        }
+
+         .newtablet .menu-box li.choose-background .background-on.disabled {
+            color: #9f9f9f;
+            background: url("images/new-tablet-design/menu-background-on-white-disabled.png") no-repeat 120px center;
+        }
+
+        .newtablet .menu-box li.choose-background .background-off {
+            background: url("images/new-tablet-design/background-none-white.png") no-repeat 120px center;
+        }
+
+        .newtablet .menu-box li.choose-background .background-off.disabled {
+            color: #9f9f9f;
+            /*background: url("images/new-tablet-design/background-none.png") no-repeat 120px center;*/
+        }
+
+
+    .newtablet .menu-box li.choose-view .exterior {
+        background-image: url("images/new-tablet-design/menu-exterior.png");
+        background-repeat: no-repeat;
+        background-position: 120px center;        
+    }
+
+        .newtablet .menu-box li.choose-view .exterior.disabled {
+             background-image: url("images/new-tablet-design/menu-exterior-disabled.png");
+        }
+
+    .newtablet .menu-box li.choose-view .interior {
+        background-image: url("images/new-tablet-design/menu-interior.png");
+        background-repeat: no-repeat;
+        background-position: 120px center;   
+    }
+
+        .newtablet .menu-box li.choose-view .interior.disabled {
+          background-image: url("images/new-tablet-design/menu-interior-disabled.png");
+        }
+
+    .newtablet .menu-box li.choose-view .overreview {
+        background-image: url("images/new-tablet-design/menu-overreview.png");
+        background-repeat: no-repeat;
+        background-position: 120px center;        
+    }
+
+        .newtablet .menu-box li.choose-view .overreview.disabled {
+            background-image: url("images/new-tablet-design/menu-overreview-disabled.png");
+        }
+
+.newtablet div.cc-root.web-size div.garage {
+    z-index: 20;
+}
+
+/*Bottom menu styles*/
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.exterior-presentation, .tablet div.cc-root.web-size div.presentation-box div.exterior-viewpoints-presentation {
+    height: 525px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.bottom-switch-box {
+    height: 76px;
+    width: 852px;
+    padding: 0 86px;
+}
+
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box div.show-selected-step-items {
+        background: url("images/new-tablet-design/menu-arrow-up-green.gif") no-repeat 80px center #000000;
+        height: 50px;
+        left: 451px;
+        padding: 0 4px;
+        position: absolute;
+        top: -30px;
+        width: 113px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'SkodaProLightBold',​Verdana,​Arial,​sans-serif;
+        z-index: 2;
+        cursor: pointer;
+        text-align: center;
+    }
+
+        .newtablet.tablet div.cc-root.web-size div.bottom-switch-box div.show-selected-step-items p {
+            width: 80px;
+            margin-top: 10px;
+        }
+
+.newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box {
+    float: left;
+    width: 113px;
+    height: 56px;
+    border-right: 1px solid #000000;
+    background: #ffffff;
+    color: #000000;
+    margin-top: 20px;
+    padding: 0px 4px;
+    font-family: 'SkodaProBold',​Verdana,​Arial,​sans-serif;
+    font-size: 14px;
+    display: table;
+}
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.last {
+        border-right: none;
+        padding-right: 3px;
+    }
+
+.newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box p {
+    text-align: center;
+    line-height: 110%;
+    height: 56px;
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 113px;
+    overflow: hidden;
+}
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box p span {
+        font-size: 10px;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.active {
+        color: #55ab3a;
+        cursor: pointer;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step1.active {
+        background-position: left 10px;
+        background-color: #dbdbdb
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step1 {
+        background-image: url("images/new-tablet-design/bottom-menu-numbers/1.png");
+        background-position: left -51px;
+        background-color: #FFFFFF;
+        background-repeat: no-repeat;
+        
+       /*// background: url("images/new-tablet-design/bottom-menu-numbers/1-off.png") no-repeat left 5px #FFFFFF;*/
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step2 {
+        background-image: url("images/new-tablet-design/bottom-menu-numbers/2.png");
+        background-repeat: no-repeat;
+        background-position: left -51px;
+        background-color: #FFFFFF;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step2.active {
+        background-position: left 10px;
+        background-color: #dbdbdb;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step3 {
+        background-image: url("images/new-tablet-design/bottom-menu-numbers/3.png");
+        background-repeat: no-repeat;
+        background-position: left -51px;
+        background-color: #FFFFFF;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step3.active {
+        background-position: left 10px;
+        background-color: #dbdbdb;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step4 {
+       background-image: url("images/new-tablet-design/bottom-menu-numbers/4.png");
+        background-repeat: no-repeat;
+        background-position: left -51px;
+        background-color: #FFFFFF;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step4.active {
+        background-position: left 10px;
+        background-color: #dbdbdb;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step5 {
+         background-image: url("images/new-tablet-design/bottom-menu-numbers/5.png");
+        background-repeat: no-repeat;
+        background-position: left -51px;
+        background-color: #FFFFFF;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step5.active {
+        background-position: left 10px;
+        background-color: #dbdbdb;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step6 {
+         background-image: url("images/new-tablet-design/bottom-menu-numbers/6.png");
+        background-repeat: no-repeat;
+        background-position: left -51px;
+        background-color: #FFFFFF;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step6.active {
+        background-position: left 10px;
+        background-color: #dbdbdb;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step7 {
+        background-image: url("images/new-tablet-design/bottom-menu-numbers/7.png");
+        background-repeat: no-repeat;
+        background-position: left -51px;
+        background-color: #FFFFFF;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.bottom-switch-box .step-box.step7.active {
+        background-position: left 10px;
+        background-color: #dbdbdb;
+    }
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer div.step-panel a.next-button {
+    padding-top: 8px;
+    height: 48px;
+    width: 86px;
+    left: 938px;
+}
+
+    .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer div.step-panel a.next-button div.forward-arrow {
+        top: 30px;
+    }
+
+    .newtablet.tablet div.cc-root.web-size.view-step7 div.cfg-box div.cfg-footer div.step-panel a.next-button div.forward-arrow {
+        /*background-image: url("images/new-tablet-design/arrow-next-disabled.png");*/
+        background-image: none;
+        cursor: auto;
+    }
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer div.step-panel a.previous-button {
+    height: 48px;
+    padding-top: 8px;
+    width: 86px;
+}
+
+    .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer div.step-panel a.previous-button div.previous-arrow {
+        top: 30px;
+    }
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.presentation-selection-box-wrapper div.presentation-selection-box div.background-switcher {
+    display:none;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.presentation-selection-box-wrapper div.presentation-selection-box {
+    display: none;
+}
+
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer div.step-panel div.progress-indicator span.step-label {
+    border-left: none;
+    border-right: none;
+    display: block;
+    z-index: 3;
+    background: url("images/new-tablet-design/menu-arrow-up-green.gif") no-repeat 80px center #000000;
+    height: 40px;
+    left: 298px;
+    padding: 10px 50px 0 0;
+    position: absolute;
+    top: -46px;
+    width: 73px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'SkodaProLightBold',​Verdana,​Arial,​sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+.newtablet.tablet.dealer div.cc-root.web-size div.cfg-box div.cfg-footer div.step-panel div.progress-indicator span.step-label{
+    left: 298px;
+}
+
+    .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer div.step-panel div.progress-indicator span.step-label.hidden {
+        display: none;
+    }
+
+.newtablet div.cc-root.web-size div.dialog div.dialog-inner.choose-item-box div.dialog-header div.close-box {
+   background: url("images/new-tablet-design/choose-item-background.png") no-repeat;
+   width: 127px;
+   height:51px;
+   position: absolute;
+   right: 446px;
+   top: 0px;
+   
+}
+
+.newtablet div.cc-root.web-size div.dialog div.dialog-inner.choose-item-box div.dialog-header a.close {
+    right: 0px;
+    position: relative;
+    background: url("images/new-tablet-design/menu-arrow-down-green.gif") no-repeat 75px center #000000;
+    width: 63px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'SkodaProLightBold',​Verdana,​Arial,​sans-serif;
+    height: 35px;
+    padding: 5px 50px 0 0;
+    margin: 3px 0 0 10px;
+    text-align: center;
+}
+
+.newtablet div.cc-root.web-size div.dialog div.dialog-inner.choose-item-box div.dialog-header {
+    border-bottom: 1px solid #9f9f9f;
+    min-height: 22px;
+    z-index: 1;
+    background: #000000;
+}
+
+.newtablet div.cc-root.web-size div.dialog div.dialog-inner.choose-item-box div.dialog-header div.header-text{
+    display: none;
+}
+
+.newtablet.tablet div.cc-root.web-size div.dialog.step-dialog div.dialog-inner.choose-item-box div.dialog-content {
+    padding: 0px 86px 0 87px;
+    margin-top:60px;
+
+}
+
+.newtablet.tablet div.cc-root.web-size div.dialog.step-dialog div.dialog-inner.choose-item-box {
+    background: url("images/new-tablet-design/choose-box-transparent.png") repeat transparent;
+}
+
+.newtablet.tablet div.cc-root.web-size div.dialog.step-dialog div.dialog-inner.choose-item-box {
+    left: 0px;
+    width: 1024px
+}
+
+    .newtablet.tablet div.cc-root.web-size div.dialog.step-dialog div.dialog-inner.choose-item-box div.dialog-content .step-summary .step-hover {
+        width: 119px;
+    }
+
+.newtablet.tablet div.cc-root.web-size div.dialog.step-dialog div.dialog-inner.choose-item-box {
+    bottom: 56px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.dialog.step-dialog div.dialog-inner.choose-item-box div.dialog-content a.step{
+    display: none;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer div.step-panel div.progress-indicator span.step-label-header {
+    display:none;
+}
+
+/* 2. krok*/
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.motor-tile div.info-ico {
+    height: 45px;
+    width: 110px;
+    background: url("images/new-tablet-design/large-info-icon.png") no-repeat center bottom transparent;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.active .tile-container .motor-label{
+    top: 6px;
+    right: 2px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.active .tile-container .power-label{
+    top: 22px;
+    right: 2px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.active .tile-container .gearbox-label{
+    top: 38px;
+    right: 2px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.active .tile-container .fuel-label{
+    top: 60px;
+    right: 2px;
+}
+
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.active .tile-container .price-label
+{
+    top: 78px;
+    /*width:*/ 
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.motor-tile .label{
+    z-index: 2;
+}
+
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.motor-tile div.label.price-label {
+    border-top: none;
+    padding-left: 0;
+    padding-right: 0;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    line-height: 28px;
+    height: 28px;
+    cursor: default;
+     border-top: 1px solid #cccccc;
+         margin: 0 10px;
+    width: 90px;
+
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.motor-tile div.motor-info {
+    width: 110px;
+    height: 85px;
+    z-index: 2;
+    background: #F2F2F2;
+    cursor: default;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.motor-tile {
+    background: #ffffff;
+    
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.color-wheel-selector a.color-tab, .newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.color-wheel-selector a.wheel-tab {
+    height: 37px;
+    width: 147px;    
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.color-wheel-selector a.color-tab {
+    background-image: url("images/new-tablet-design/barvy.png");
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.color-wheel-selector a.wheel-tab {
+    background-image: url("images/new-tablet-design/kola.png");
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box.wheel div.color-wheel-selector a.color-tab {    
+    background-position: 10px 14px;
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box.color div.color-wheel-selector a.color-tab {
+    background-position: 10px -31px;
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box.color div.color-wheel-selector a.wheel-tab {    
+    background-position: 10px 17px;
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box.wheel div.color-wheel-selector a.wheel-tab {
+    background-position: 10px -34px;
+}
+
+.newtablet .cfg-box .color-wheel-selector .border-arrow {
+    width: 24px;
+    height: 61px;
+    position: absolute;
+    left: 180px;
+    z-index: 2;
+    display: block;
+}
+
+.newtablet .cfg-box.wheel .color-wheel-selector .border-arrow {
+    background: url("images/new-tablet-design/sipka-01.png") no-repeat 0px 0px #ffffff;
+    
+    
+}
+
+.newtablet .cfg-box.color .color-wheel-selector .border-arrow {
+    background: url("images/new-tablet-design/sipka-02.png") no-repeat 0px 0px #ffffff;
+    left: 179px;
+}
+
+/* Krok 3*/
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.wheel-picker div.wheels-to-pick div.active-icon {
+    z-index: 3;
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.cfg-content-header.emission{
+    width: 280px;
+    -o-text-overflow: ellipsis;   /* Opera */
+    text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
+    overflow:hidden;              /* don't show excess chars */
+    white-space:nowrap;           /* force single line */
+    padding-right: 95px;
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.cfg-content-header {
+    visibility: visible;
+    border-bottom: 1px solid #cccccc;
+    z-index: 2;
+    /*white-space: nowrap;*/
+    font-size: 14px;
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.cfg-content-header span {
+    font-family: 'SkodaProLightBold',Verdana,Arial,sans-serif;
+}
+
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.color-wheel-selector {
+    top: 87px;
+    z-index: 1;
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box div.cfg-content {
+    top: 158px;
+    height: 366px;
+    
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.wheel-picker div.wheels-to-pick div.info-ico {
+    height: 45px;
+    top: 117px;
+    background: url("images/new-tablet-design/large-info-icon.png") no-repeat center bottom transparent;
+    position: absolute;
+    z-index: 10;
+    width: 110px;
+    cursor: help;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.wheel-picker div.wheels-to-pick a.wheel-to-pick .wheel-image {
+    height: 115px;
+    width: 110px;
+    position: relative;    
+
+    background-color: #f2f2f2;
+    background-position: 50% 10px;
+    background-repeat: no-repeat;
+    cursor: default;
+    cursor: pointer;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.wheel-picker div.wheels-to-pick a.wheel-to-pick.active .wheel-image{
+    border: 2px solid #9f9f9f;
+    background-color: #e8f4e4;
+    left: -1px;
+    width: 108px;
+    top: -1px;
+    background-position: 50% 9px;
+}
+
+.newtablet.tablet .wheel-notice {
+   background-color: #FFFFFF;
+    border: 1px solid #9F9F9F;
+    color: #000000;
+    font-size: 11px;
+    left: -95px;
+    line-height: 1.2em;
+    padding: 2px 10px;
+    position: absolute;
+    text-align: center;
+    width: 225px;
+    z-index: 85;
+    white-space : normal;
+}
+    .newtablet.tablet .wheel-notice.hidden {
+        display:none;
+    }
+
+.newtablet.tablet div.wheel-box {
+    position: relative;
+    width: 110px;
+    height: 160px;
+    float: left;
+    margin: 0 6px 6px 0; 
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.wheel-picker div.wheels-to-pick a.wheel-to-pick div.price-label {
+    background-color: transparent;
+    z-index: 10;
+    width: 90px;
+    line-height: 21px;
+    top: 92px;
+    cursor: default;
+    padding: 0;
+    margin: 0 10px;
+    border-top: 1px solid #cccccc;
+}
+
+
+/* Krok 4 */
+
+.newtablet.tablet.dealer div.cc-root.web-size div.presentation-box div.interior-presentation div.other-scenes{
+    left: 123px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.interior-presentation div.other-scenes {
+    left: 179px;
+    height: 105px;
+    width: 451px;
+}
+
+.newtablet div.cc-root.web-size div.presentation-box div.interior-presentation div.other-scenes a.scene {
+    margin: 19px 7px 0;
+}
+
+.newtablet div.cc-root.web-size div.presentation-box div.interior-presentation div.other-scenes a.scene.active {
+    margin: 13px 7px 0;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.interior-picker div.interiors-to-pick div.interior-box {
+    position: relative;
+    width: 110px;
+    height: 160px;
+    float: left;
+    margin: 0 6px 6px 0; 
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.interior-picker div.interiors-to-pick a.interior-to-pick {
+    border: 1px solid #CCCCCC;
+    background-color: #ffffff;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.interior-picker div.interiors-to-pick .interior-to-pick .tile-container {
+    background-color: #f2f2f2;
+    width: 110px;
+    height: 115px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper  div.interior-picker div.interiors-to-pick .interior-to-pick.active  .tile-container{
+    border: 2px solid #9f9f9f;
+    background-color: #e8f4e4;
+    width: 106px;
+    z-index: 10;
+    height: 111px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.interior-picker div.interiors-to-pick div.info-ico {
+    background: url("images/new-tablet-design/large-info-icon.png") no-repeat center bottom;
+    cursor: help;
+    height: 45px;
+    position: absolute;
+    top: 117px;
+    width: 110px;
+    z-index: 10;
+
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.interior-picker div.interiors-to-pick a.interior-to-pick img.interior-image {
+    width: 110px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    cursor: default;
+    
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.interior-picker div.interiors-to-pick a.interior-to-pick div.label {
+    height: 60px;
+    top: 60px;
+    
+    cursor: default;
+    margin: 0 5px;
+    left: 0px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.interior-presentation div.copyright-note {
+    bottom: 5px;
+}
+
+.newtablet.tablet .interior-picker .disclaimer-marketing-image{
+     font-size: 4px;
+    left: 0;
+    line-height: 10px;
+    padding-left: 2px;
+    position: absolute;
+    top: 50px;
+    width: 108px;
+}
+
+/* Krok 5 */
+
+.newtablet.tablet div.cc-root.web-size.view-step5 div.presentation-box div.extra-presentation div.extra-content {
+    height: 425px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part {
+    height: 93px;
+    border-bottom: 1px solid #CCCCCC;
+    /*overflow: hidden;*/
+}
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.info-ico {
+       background-image: url("images/new-tablet-design/info-accesories.png");
+        background-position: center top;
+        bottom: 0;
+        height: 45px;
+        left: 0;
+        top: 214px;
+        width: 100%;
+    }
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.info-ico.left{
+
+        left:35px;
+        width:45px;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.extra-item-image-div {
+        position: relative;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.extra-item-image-div.video {
+           overflow: initial!important;
+           text-align:left!important;
+           width:auto!important;
+    }
+
+        .newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.extra-item-image-div.video .imageHidden {
+            overflow:hidden;
+            position:relative;
+                height: 115px;
+        }
+
+     .newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.extra-item-image-div.video img {
+           max-width:187px!important;
+           top:-20px!important;
+           position: relative;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.extra-item-image-div.video span.video-player-arrow
+            {
+                position: absolute; 
+                display: block;
+                height: 45px;
+                width: 45px;
+                top:214px;
+                left: 95px;
+                background: transparent url('images/new-tablet-design/play-accesories.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center, center;
+            }
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.extra-item-image-div img.extra-item-image {
+        max-height: 93px;
+    }
+
+.newtablet div.cc-root.web-size div.extra-item {
+    height: 260px;
+    margin: 15px 0 5px 10px;
+}
+
+.newtablet div.cc-root.web-size div.presentation-box div.extra-item.last-item{
+    margin-bottom: 50px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.extra-item div.item-label-part {
+    top: 94px;
+    max-height: 48px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.extra-item.active div.item-label-part{
+    background-color: #e8f4e4;
+    height: 48px;
+    max-height: 48px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.selected-header {
+    background-image: url("images/new-tablet-design/extra-equipment-chosen.png");
+    background-position: 4px 2px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.selected-header.active {
+    background-position: 4px -28px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.recommended-header {
+    background-image: url("images/new-tablet-design/extra-equipment-favourite.png");
+    background-position: 4px 4px;
+    padding: 10px 10px 10px 39px;
+    margin-left: -10px;
+}
+
+    .newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.recommended-header.active {
+        background-color: #ececec;
+        background-position: 4px -40px;
+        color: #555555;
+    }
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.selected-header.active {
+        background-color: #ececec;
+        color: #555555;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.selected-header {
+    padding: 10px 10px 10px 45px;
+    margin-left: -10px;
+}
+
+
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.extra-header {
+    padding: 10px 10px 10px 39px;
+    margin-left: -10px;
+    background-position: 4px 2px;
+    background-image: url("images/new-tablet-design/show-everything-icon.png");
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.extra-header.active {
+    background-position: 4px -28px;
+    color: #555555;
+    background-color: #ECECEC;
+}
+
+.newtablet div.cc-root.web-size.view-step5 div.cfg-box div.cfg-content-header, .newtablet div.cc-root.web-size.view-step6 div.cfg-box div.cfg-content-header {
+    margin-bottom: 0px;
+}
+
+.newtablet div.cc-root.web-size.view-step5 div.cfg-box div.cfg-content div.cfg-content-wrapper, .newtablet div.cc-root.web-size.view-step6 div.cfg-box div.cfg-content div.cfg-content-wrapper {
+    padding: 0 0 0 10px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.extra-item.active {
+    color: #555555;
+    background-color: #ECECEC;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.extra-presentation div.copyright-note {
+    right: 30px;
+    
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.extra-presentation.extra-equipment div.copyright-note {
+    bottom: 55px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.extra-presentation.skoda-care div.copyright-note {
+    bottom: 8px;
+}
+
+
+.newtablet div.cc-root.web-size div.presentation-box div.extra-presentation div.extra-header div.heart-note {
+    background-image: url("images/new-tablet-design/dealer-recommendation-14x14.png");
+    background-position: 0 9px;
+}
+
+.newtablet div.cc-root.web-size div.presentation-box div.extra-presentation div.extra-header div.star-note {
+    background-image: url("images/new-tablet-design/suitable-14x14.png");
+    background-position: 2px 9px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.heart-icon {
+    background-image: url("images/new-tablet-design/recommanded.png");
+    bottom: -17px;
+    width: 38px;
+    height: 38px;
+    right: 50px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.extra-item div.item-top-part div.star-icon {
+    background-image: url("images/new-tablet-design/suitable.png");
+    bottom: -17px;
+    width: 38px;
+    height: 38px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.extra-presentation.extra-equipment {
+    top: 48px;    
+}
+
+.newtablet div.cc-root.web-size div.presentation-box div.extra-presentation div.extra-header {
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.newtablet div.cc-root.web-size div.presentation-box {
+    background-image: none;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box {
+    /*border-right: 1px solid #e7e7e7;*/
+}
+
+-div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-extra div.extra-items a.extra-item {
+    border-bottom: 1px solid #CCCCCC;
+}
+.newtablet .disclaimer-marketing-image{
+    z-index: 0;
+}
+
+.newtablet.tablet div.cc-root.web-size div.extra-item div.item-price-part a{
+    background-image: none;
+    background-position: 50% 35%;
+    background-size: auto auto;
+    bottom: initial;
+    font-family: "SkodaProBold",Verdana,Arial,sans-serif;
+    height: 208px;
+    left: -9px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: -161px;
+    width: 185px;
+    z-index:15;
+}
+
+.newtablet.tablet div.cc-root.web-size div.extra-item div.item-price-part a.remove{
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    left: -1px;
+    line-height: 95px;
+    border: 2px solid #9f9f9f;
+
+}
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-price-part a.add {
+        font-size: 0px;
+        line-height: 0px;
+        text-indent: -2000px;
+        overflow: hidden;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-price-part{
+        height: 50px;        
+        width:172px;
+        border-bottom: 1px solid #9f9f9f;
+        border-top: 0px;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item.active div.item-price-part {
+        background-color:  #e8f4e4;
+        width: 187px;
+        left: 0px;
+    }
+
+        .newtablet.tablet div.cc-root.web-size div.extra-item.active div.item-price-part div.monthly-from {
+            left: 8px;
+        }
+         .newtablet.tablet div.cc-root.web-size div.extra-item.active div.item-price-part div.total{
+        left: 8px;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-price-part div.monthly-from{
+        top: 0px;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.extra-item div.item-price-part div.total{
+        top: 23px;
+    }
+
+
+/* summary */
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.upper-notification-slider {
+    top: 46px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.finish-presentation div.exterior-presentation div.copyright-note {
+    bottom: 0px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.finish-presentation div.copyright-note {
+    bottom: 47px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.finish-presentation div.info-box {
+    top: 41px;
+}
+
+/*.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.active.item-info div.next-arrow,
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.item-info div.next-arrow,
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.active.item-show div.next-arrow,
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.item-show div.next-arrow {
+    background-image: none;
+}*/
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.active{
+     color: #555555;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.item-info {
+     background-image: url("images/new-tablet-design/info-summary.png");
+     background-position: 0 2px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.active.item-info {
+    background-position: 0 -29px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.item-show {
+    background-image: url("images/new-tablet-design/exterior-view-summary.png");
+    background-position: 0 2px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.item-show.active {
+    background-position: 0 -29px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.item-carcard {
+    background-image: url("images/new-tablet-design/karta-vozu-summary.png");
+    background-position: 0 2px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.item-wallpaper {
+    background-image: url("images/new-tablet-design/tapeta-summary.png");
+    background-position: 0 2px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.cfg-content-wrapper-finish div.finish-menu a.finish-item.item-sendemail {
+    background-image: url("images/new-tablet-design/email-summary.png");
+    background-position: 0 2px;
+}
+
+/* horní lista  */
+
+.newtablet .ci-top-header .top-menu-area .car-prices-box {
+    float: right;
+}
+
+    .newtablet .ci-top-header .top-menu-area .car-prices-box table {
+        
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: right;
+        margin-right: 15px;
+    }
+
+        .newtablet .ci-top-header .top-menu-area .car-prices-box table.with-financing {
+            margin-top: 5px;
+        }
+
+.newtablet .ci-top-header .top-menu-area .car-prices-box .price-row-desc {
+    color: #c2c2c2;
+    font-family:'SkodaProBold',Verdana,Arial,sans-serif;
+    
+}
+
+.newtablet .ci-top-header .top-menu-area .car-prices-box .total-price-row {
+    color: #000000;
+    font-family:'SkodaProBold',Verdana,Arial,sans-serif;    
+}
+
+    .newtablet .ci-top-header .top-menu-area .car-prices-box .financing-row {
+       color: #c5c5c5; 
+       font-family: 'SkodaProLightBold',Verdana,Arial,sans-serif;
+    }
+
+    .newtablet .ci-top-header .top-menu-area .car-prices-box td {
+        min-width: 150px;
+        line-height: 150%;
+    }
+
+    .newtablet .ci-top-header .top-menu-area .car-prices-box td.left-label {
+        padding-right: 25px;
+    }
+
+    .newtablet .ci-top-header .top-menu-area .car-prices-box .financing-row td.financing-label {
+        cursor: pointer;
+        color: #4ba82e;
+        padding-right: 25px;
+        background-image: url('images/wheel-icon.png');
+        background-position: 100% 50%;
+        background-repeat: no-repeat;    
+    }
+ /* horni lista dealer */
+.newtablet.tablet.dealer div.cc-root.web-size div.ci-top-header div.top-menu-area div.service-menu-settings {
+    left: 775px;
+    position: absolute;
+    width: 815px;
+    z-index: 10;
+    background: #ffffff;
+}
+
+.newtablet.tablet.dealer div.cc-root.web-size div.ci-top-header div.top-menu-area div.service-menu-settings div.service-menu-button {
+    width: 32px;
+    height: 70px;
+    float: left;
+    background: url("images/new-tablet-design/dealer-sevice-menu-button-array-left.png") no-repeat left center;
+    cursor: pointer;
+}
+
+    .newtablet.tablet.dealer div.cc-root.web-size div.ci-top-header div.top-menu-area div.service-menu-settings div.service-menu-button.active {
+        background: url("images/new-tablet-design/dealer-sevice-menu-button-array-right.png") no-repeat left center;
+    }
+
+    .newtablet.tablet.dealer div.cc-root.web-size div.ci-top-header div.top-menu-area div.service-menu-settings div.service-menu-button span {
+        background-color: #000000;
+        color: #FFFFFF;
+        display: block;
+        left: 16px;
+        padding-top: 20px;
+        position: relative;
+        text-align: center;
+        width: 110px;
+        z-index: -1;
+        font-family: 'SkodaProLightBold',​Verdana,​Arial,​sans-serif;
+        font-size: 14px;
+        height: 70px;
+    }
+
+    .newtablet.dealer .ci-top-header .top-menu-area .car-prices-box table {
+        margin-right: 50px;
+    }
+
+    /* mickey mouse*/
+
+.newtablet.tablet.local-vred div.cc-root.web-size div.presentation-box div.mickey-mouse-layer {
+    background-color: #9F9F9F;
+    height: 354px;
+    left: 574px;
+    top: 87px;
+    width: 55px;
+}
+
+.newtablet.tablet.local-vred div.cc-root.web-size.view-step5 div.presentation-box div.mickey-mouse-layer{
+    background-color: transparent;
+}
+
+.newtablet.tablet.local-vred div.cc-root.web-size.view-step5 div.presentation-box div.mickey-mouse-layer div{
+    display: none;
+}
+
+.newtablet.tablet.local-vred div.cc-root.web-size.view-step5 div.presentation-box div.mickey-mouse-layer.displayed div{
+    display: block;
+}
+
+.newtablet.tablet.local-vred div.cc-root.web-size.view-step5 div.presentation-box div.mickey-mouse-layer div.animation-icon{
+    display: block;
+}
+
+.newtablet.tablet.local-vred div.cc-root.web-size div.presentation-box div.mickey-mouse-layer div {
+    border: 1px solid #CCCCCC;
+    left: -6px;
+}
+
+
+    .newtablet.tablet.local-vred div.cc-root.web-size div.presentation-box div.mickey-mouse-layer div.home-icon {
+        top: -17px;
+       
+    }
+
+    .newtablet.tablet.local-vred div.cc-root.web-size div.presentation-box div.mickey-mouse-layer div.animation-icon {
+        top: 53px;
+        
+    }
+
+    .newtablet.tablet.local-vred div.cc-root.web-size div.presentation-box div.mickey-mouse-layer div.minus-icon {
+        top: 193px;
+        
+    }
+
+    .newtablet.tablet.local-vred div.cc-root.web-size div.presentation-box div.mickey-mouse-layer div.plus-icon {
+        top: 135px;        
+    }
+
+    .newtablet.tablet.local-vred div.cc-root.web-size div.presentation-box div.mickey-mouse-layer div.rotation-icon {
+        top: 337px;
+    }
+
+    .newtablet.tablet.local-vred div.cc-root.web-size div.presentation-box div.mickey-mouse-layer div.move-icon {
+        top: 276px;
+    }
+
+    /* dialog colors */
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.presentation-selection-box-wrapper div.fleet-color-notice {
+    bottom: 6px;
+    color: #000000;
+    width: 300px;
+    background-color: #ffffff;
+    left: 132px;
+    border: 1px solid #9f9f9f;
+}
+
+/* conflict box */
+
+
+.newtablet div.cc-root.web-size div.dialog.conflict-dialog div.dialog-content div.conflict-box div.conflict-add div.head {
+    text-align: center;
+    font-family: 'SkodaProBold',​Verdana,​Arial,​sans-serif;
+    height: 30px;
+    border-bottom: 1px solid #555555;
+    margin: 0px 38px;
+}
+
+.newtablet div.cc-root.web-size div.dialog.conflict-dialog div.dialog-content div.conflict-box div.conflict-remove div.head {
+    text-align: center;
+    font-family: 'SkodaProBold',​Verdana,​Arial,​sans-serif;
+    height: 30px;
+    border-bottom: 1px solid #555555;
+    margin: 0px 38px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.dialog.conflict-dialog div.dialog-inner {
+    width: 690px;
+}
+
+.newtablet div.cc-root.web-size div.dialog.conflict-dialog div.dialog-content div.conflict-remove div.extra-item {
+    float: none;
+    margin: 15px auto 10px;
+}
+
+.newtablet div.cc-root.web-size div.dialog div.dialog-inner div.dialog-header div.header-text {
+    border-bottom: none;
+    margin-bottom: 5px;
+}
+
+.newtablet div.cc-root.web-size div.dialog.conflict-dialog div.dialog-content div.conflict-explanation {
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 14px;
+    line-height: 1.3em;
+    padding-bottom: 12px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.dialog.conflict-dialog div.dialog-content div.conflict-box div.conflict-add {
+    padding-top: 20px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.dialog.conflict-dialog div.dialog-content div.conflict-box div.conflict-remove {
+    width: 249px;
+    background-color: #ECECEC;
+    padding-top: 20px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.dialog.conflict-dialog div.dialog-inner {
+    left: 189px;
+}
+
+.newtablet  div.cc-root.web-size div.dialog.conflict-dialog div.dialog-inner div.dialog-content {
+       overflow-y: hidden;
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.exterior-viewpoints-presentation div.other-scenes {
+    height: 85px;
+    left: 179px;
+    width: 451px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.newtablet.tablet div.cc-root.web-size div.presentation-box div.exterior-viewpoints-presentation div.waiting-box.loading {
+    background-image: url("images/new-tablet-design/horizontal-loader-tablet.gif");
+    background-color: #000000;
+    background-position: center center;
+    width: 400px;
+    bottom: 95px;
+    left: 207px;
+    background-repeat: no-repeat;
+}
+
+/*tile add button*/
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.tile-add {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 1px solid #CCCCCC;
+    margin: 0 7px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 119px;
+    white-space: nowrap;
+    width: 95px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.tile-add .add-button {
+    background: url("images/new-tablet-design/add-button-enabled.gif") no-repeat scroll center center;
+    display: inline-block;
+    height: 20px;
+    margin-left: 5px;
+    position: relative;
+    top: 7px;
+    width: 20px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper .active div.tile-add .add-button {
+    background: url("images/new-tablet-design/add-button-disabled.gif") no-repeat center center;
+    display: inline-block;
+    height: 20px;
+    margin-left: 5px;
+    position: relative;
+    top: 7px;
+    width: 20px; 
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper div.tile-add span {    
+    display: inline;
+    font-size: 14px;
+    line-height: 40px;
+    margin: 0 10px;
+    position: relative;
+    z-index: 11;
+    color: #000000;
+}
+
+/*.newtablet.tablet div.cc-root.web-size div.presentation-box div.finish-presentation div.info-box div.left-column {
+    height: 485px;
+}*/
+
+.newtablet div.cc-root.web-size.view-step7 div.cfg-box div.cfg-footer div.step-panel a.next-button {
+    display: block;
+    /*background-color: #4f873e;
+    color: #bababa;*/
+    font-size: 0px;
+    color: 	#4BA82E;
+    cursor: auto;
+    
+}
+
+
+
+.newtablet.dealer div.cc-root.web-size.view-step1 div.cfg-box div.cfg-footer div.step-panel a.disabled {
+   /*display: block;
+    background-color: #909090;
+    color: #bababa;*/
+    color:#555555;
+    font-size: 0px;
+    cursor:auto;
+    
+}
+
+    .newtablet.dealer div.cc-root.web-size.view-step1 div.cfg-box div.cfg-footer div.step-panel a.disabled .previous-arrow {
+        /*background-image: url("images/new-tablet-design/previous-arrow-disabled.png");*/
+        background-image: none;
+    }
+
+
+.newtablet div.cc-root.web-size div.presentation-box div.presentation-selection-box-wrapper div.animation-progress {
+     bottom: 50px;
+}
+
+
+/* price-table */
+
+.newtablet.tablet.dealer div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table {
+    left: 980px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table {
+    border-right: medium none;
+    font-family: 'SkodaProBold',​Verdana,​Arial,​sans-serif !important;
+    font-size: 14px;
+    left: 1000px;
+    position: relative;
+    //right: -1000px;
+    float: right;
+    top: -605px;
+}
+
+    .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table tr.finance-row {
+        font-family:'SkodaProLightBold',​Verdana,​Arial,​sans-serif !important;
+    }
+
+    .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td {
+        min-width: 150px !important;
+        line-height: 150%;
+        position: relative;
+        text-align: right;        
+    }
+
+        
+        .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div {
+            position: relative !important;
+            top: 0px !important;
+            left: 0px !important;
+            right: 0px !important;
+            bottom: 0px !important;
+            min-width: 150px !important;
+            display: block;
+            line-height: 150%;
+            height: 18px;
+            width: auto;
+        }
+
+
+
+    .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table .financing-row td div.item-complete {
+        background-color: #ffffff;
+        color: 	#C5C5C5;
+    }
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div.entire-car-complete {
+    color:#000000;
+}
+ 
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div.item-complete {
+    color:#000000;
+    background-color: #ffffff;
+}
+    
+    .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div.entire-car-extraprice-ico {
+        min-width: 0px !important;
+        padding-top: 9px;
+        display: none;
+    }
+
+        .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div.entire-car-extraprice-ico.show {
+            display: block;
+        }
+
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div.item-monthly {
+    display: block;
+    text-align: right;
+    width: auto;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div.monthly-rate-header {
+    display: block;
+    padding: 0;
+    text-align: right;
+}
+
+    .newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div.monthly-rate-header a {
+        display: block;
+        width: 88%;
+        
+    }
+
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td div.total-price-header {
+    height: 20px;
+    color:#000000;
+    text-align: right;
+    display: block;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td.empty-cell {
+    display:initial; 
+}
+
+.newtablet div.cc-root.web-size div.extra-item.service-care div.item-price-part div.service-care-inactive-total {
+    position: absolute;
+    top: -24px;
+    font-size: 12px;
+}
+
+.newtablet div.cc-root.web-size div.dialog.hover-dialog.hover-dialog-for-package {
+    padding-bottom: 0px;
+}
+
+/* dealer menu pozadi */
+
+.newtablet .menu-box li.choose-background .studio.disabled {
+            color: #9f9f9f;
+            background: url("images/new-tablet-design/menu-background-on-white-disabled.png") no-repeat 120px center;
+        }
+
+        .newtablet .menu-box li.choose-background .studio {
+            background: url("images/new-tablet-design/background-none-white.png") no-repeat 120px center;
+        }
+
+.newtablet .menu-box li.choose-background .Waldstrasse.disabled {
+            color: #9f9f9f;
+            background: url("images/new-tablet-design/menu-background-on-white-disabled.png") no-repeat 120px center;
+        }
+
+        .newtablet .menu-box li.choose-background .Waldstrasse {
+            background: url("images/new-tablet-design/menu-background-on-white.png") no-repeat 120px center;
+        }
+
+.newtablet .menu-box li.choose-background .Potsi.disabled {
+            color: #9f9f9f;
+            background: url("images/new-tablet-design/night-disabled.png") no-repeat 120px center;
+        }
+
+        .newtablet .menu-box li.choose-background .Potsi {
+            background: url("images/new-tablet-design/night.png") no-repeat 120px center;
+        }
+
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-footer table.price-table td.item-column {
+    display: none;
+}
+
+.newtablet div.cc-root.web-size div.dialog.hover-dialog div.dialog-inner div.more-info-link-box a.more-info-link-a {
+    padding: 5px 25px 6px 10px;
+    color: #FFFFFF;
+    top: -5px;
+    right: 5px;
+    background: url("images/arrow-next.png") #4ba82e  95% 50% no-repeat;
+}
+
+.newtablet div.cc-root.web-size .cfg-content-header .emissions-box{
+    position:absolute;
+    right: 2px;
+    top: 12px;
+    font-family: 'SkodaProLightBold',​Verdana,​Arial,​sans-serif;
+    font-size: 14px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content-header div.fuel-selector.left{
+   right:112px;
+   top: 10px;
+}
+
+.newtablet div.cc-root.web-size div.presentation-box div.target-engine-envelope div.target-engine-scrollable div.target-scrolling-area table.target-engine-table {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.newtablet div.cc-root.web-size div.presentation-box div.target-engine-envelope div.target-static-headers {
+    margin-top: 46px;
+}
+
+.newtablet div.cc-root.web-size div.presentation-box div.target-engine-envelope div.target-engine-scrollable {
+    max-height: 480px;
+}
+
+/* fabia concept -start */
+
+.newtablet div.cc-root.web-size.view-step3 .cfg-box.wheel-is-hide .cfg-content-header {
+    display: none;
+}
+
+.newtablet.tablet div.cc-root.web-size.view-step3 div.cfg-box.wheel-is-hide div.cfg-content {
+    top: 59px;
+    height: 455px;
+}
+/* fabia concept - end */
+
+/* engine type displayed - start */
+.newtablet.tablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.engine-type-displayed a.tile.motor-tile div.label.engine-type-label {
+   z-index: 20;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.engine-type-displayed a.motor-tile div.info-ico{
+    top: 56px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.engine-type-displayed a.tile.motor-tile div.motor-info {
+    height: 92px;
+}
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper.engine-type-displayed a.tile.motor-tile {
+    height: 160px;
+}
+
+/* engine type displayed - end */
+
+.newtablet div.cc-root.web-size div.cfg-box div.cfg-content div.cfg-content-wrapper a.tile.motor-tile div.label.gearbox-label{
+    z-index: 2;
+}
+
+.newtablet.tablet div.cc-root.web-size div.ci-top-header div.top-menu-area{
+    width: 815px;
+}
+
+.newtablet.tablet div.cc-root.web-size div.ci-top-header div.connection-test{
+    right: 510px;
+}

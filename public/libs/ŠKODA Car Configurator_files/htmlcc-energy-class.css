@@ -1,0 +1,59 @@
+﻿div.emmision-panel {
+    border: solid 0px black;
+    /*display: inline;*/
+}
+div.emmision-label {
+    display: block;
+    top: 50%;
+    position: relative;
+}
+div.emmision-panel .emmision-title {
+    color: Black;
+    font-size: 10px;
+}
+div.emmision-panel .emision-row {
+    background-color: transparent;
+    color: black;
+    padding-left: 6px;
+}
+div.emmision-panel .emision-row .emision-item {
+    padding-left: 6px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    float: left;
+}
+div.emmision-label .emision-row .emision-item {
+    /*text-shadow: none;*/
+}
+div.emmision-panel .emision-row .emission-item-arrow {
+    width: 0;
+    height: 0;
+    border-left: 50px solid black;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    float: left;
+}
+
+div.selection-mark-wrap {
+    position: relative;
+    display: flex;
+}
+div.emission-selected-arrow {
+    width: 0;
+    height: 0;
+    border-right: 30px solid black;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    float: left;
+}
+div.emmision-panel .selection-mark {
+    padding-right: 6px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    float: left;
+}
+div.clear {
+    clear: both;
+}

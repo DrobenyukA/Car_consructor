@@ -1,13 +1,14 @@
 /**
  * Created by Drobenyuk.A on 09.07.16.
  */
-var express    = require('express'),
-    bodyParser = require('body-parser'),
-    car        = require('./models/CarConstructor.js'),
-    credit     = require('./models/CreditCalculator.js'),
-    app        = express();
+var express     = require('express'),
+    bodyParser  = require('body-parser'),
+    car         = require('./models/CarConstructor.js'),
+    credit      = require('./models/CreditCalculator.js'),
+    dataService = require('./services/DataService.js'),
+    app         = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
@@ -45,6 +46,17 @@ app.get('/period', function (req, res){
 
 app.get('/interest', function (req, res){
     res.send(credit.getInterest(req.query));
+});
+
+// TODO fix this issue with post method
+app.post('/savecartodb', function(req, res){
+    var success = dataService.saveCar(req.body);
+    console.log(req.body);
+    if(success){
+        res.redirect('/?success=true');
+    } else{
+        res.redirect('/?success=false');
+    }
 });
 
 app.listen(8000, function () {

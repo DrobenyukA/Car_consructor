@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Car constructor</title>
     <style>
-        #car-constructor select{
+        #car-constructor select,
+        #credit-calculator select{
             display: none;
         }
         #car-constructor select[name="models"]{
@@ -13,21 +14,24 @@
     </style>
 </head>
 <body>
-    <form method="get" id="car-constructor">
+    <form action="savecartodb" method="post" id="car-constructor">
         <select name="models" onchange="setComplectation()"></select>
         <select name="complectations" onchange="setEngine()"></select>
         <select name="engine" onchange="setColors()"></select>
         <select name="colors" onchange="setOptions()"></select>
         <select name="options" onchange="goNext()"></select>
+        <div></div>
     </form>
     <div>Загальна вартість: <span id="price-js">0</span> грн</div>
     <div id="next-steps"></div>
-    <form method="get" id="credit-calculator">
+    <form action="credit" method="post" id="credit-calculator">
         <select name="banks" onchange="setPayments()"></select>
         <select name="payment" onchange="setPeriods()"></select>
         <select name="period" onchange="getInterest()"></select>
-        <input type="text" name="interest"/>
+        <span class="interest"></span>
     </form>
+    <div id="final-steps"></div>
+
     <script type="text/javascript" src="libs/jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="js/carsApp.js"></script>
     <script type="text/javascript" src="js/creditApp.js"></script>
