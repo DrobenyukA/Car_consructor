@@ -21,10 +21,7 @@ $(function(){
            var payments = '<option value="0">Оберіть початковий внесок</option>'
 
            for (var i = 0; i < data.length; ++i) {
-               payments += '<option value="' + data[i].payment_id +
-                   '" data-comission="'+ data[i].payment_comission +
-                   '" data-month-comission="'+ data[i].payment_month_comission +
-                   '" data-insurance="'+ data[i].payment_insurance +'">' +
+               payments += '<option value="' + data[i].payment_id + '">' +
                    + data[i].payment_value + "% від вартості" +
                    '</option>';
            }

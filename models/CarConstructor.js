@@ -2,25 +2,9 @@
  * Created by drobenyuk on 09.07.16.
  */
 
-var fs     = require('fs'),
-    logger = require('./../services/Logger');
+var dataService = require('../services/DataService.js');
 
 module.exports = (function(){
-
-    /**
-     * Data manager
-     * @param path
-     * @returns {Array}
-     */
-    var getData = function (path) {
-        try{
-            var result = fs.readFileSync(path, 'utf8');
-            return JSON.parse(result);
-        } catch(e) {
-            logger.logError("Can't read from file");
-            return [];
-        }
-    };
 
     /**
      * Models manager
@@ -28,12 +12,12 @@ module.exports = (function(){
      */
     var getModels = function (){
         var path = './data/models.json';
-        return getData(path);
+        return dataService.getData(path);
     };
     
     var getComplectations = function (params) {
         var path   = './data/complectations.json',
-            data   = getData(path),
+            data   = dataService.getData(path),
             result = [];
 
         for(var i = 0; i < data.length; i++){
@@ -46,7 +30,7 @@ module.exports = (function(){
     
     var getEngines = function(params){
         var path   = './data/engines.json',
-            data   = getData(path),
+            data   = dataService.getData(path),
             result = [];
 
         for(var i = 0; i < data.length; i++){
@@ -60,7 +44,7 @@ module.exports = (function(){
 
     var getColors = function(params){
         var path   = './data/colors.json',
-            data   = getData(path),
+            data   = dataService.getData(path),
             result = [];
 
         for(var i = 0; i < data.length; i++){
@@ -76,7 +60,7 @@ module.exports = (function(){
 
     var getOptions = function(params){
         var path   = './data/options.json',
-            data   = getData(path),
+            data   = dataService.getData(path),
             result = [];
 
         for(var i = 0; i < data.length; i++){

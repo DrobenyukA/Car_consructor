@@ -16,16 +16,23 @@ function changePrice() {
 
     var totalPrice = modelPrice + complPrice + enginePrice + colorPrice + optionPrice;
     $('#price-js').text(totalPrice);
-};
+    $('input[name="price"]').val(totalPrice);
+}
 
 function setComplectation(){
     var modelId = $('select[name="models"]').val();
     $.ajax('/complectations', { data: {modelId: modelId} }).done(window.CarsApp.getCarsComplectation);
-
-    $('select[name="complectations"]').html('').css('display', 'inline-block');
-    $('select[name="engine"]').html('').css('display', 'none');
-    $('select[name="colors"]').html('').css('display', 'none');
-    $('select[name="options"]').html('').css('display', 'none');
+    
+    $('.compl').removeClass('hidden');
+    $('select[name="complectations"]').html('');
+    $('.engine').addClass('hidden');
+    $('select[name="engine"]').html('');
+    $('.colors').addClass('hidden');
+    $('select[name="colors"]').html('');
+    $('.options').addClass('hidden');
+    $('select[name="options"]').html('');
+    $('#car-constructor .callout').addClass('hidden');
+    $('.btn-save').html('');
 
     changePrice();
 }
@@ -35,9 +42,14 @@ function setEngine(){
     var complId = $('select[name="complectations"]').val();
     $.ajax('/engines', { data: {modelId: modelId, complId: complId} }).done(window.CarsApp.getCarsEngine);
 
-    $('select[name="engine"]').html('').css('display', 'inline-block');
-    $('select[name="options"]').html('').css('display', 'none');
-    $('select[name="colors"]').html('').css('display', 'none');
+    $('.engine').removeClass('hidden');
+    $('select[name="engine"]').html('');
+    $('.colors').addClass('hidden');
+    $('select[name="colors"]').html('');
+    $('.options').addClass('hidden');
+    $('select[name="options"]').html('');
+    $('#car-constructor .callout').addClass('hidden');
+    $('.btn-save').html('');
 
     changePrice();
 }
@@ -46,8 +58,12 @@ function setColors(){
     var modelId = $('select[name="models"]').val();
     $.ajax('/colors', { data: {modelId: modelId} }).done(window.CarsApp.getColors);
 
-    $('select[name="colors"]').html('').css('display', 'inline-block');
-    $('select[name="options"]').html('').css('display', 'none');
+    $('.colors').removeClass('hidden');
+    $('select[name="colors"]').html('');
+    $('.options').addClass('hidden');
+    $('select[name="options"]').html('');
+    $('#car-constructor .callout').addClass('hidden');
+    $('.btn-save').html('');
     changePrice();
 }
 
@@ -56,46 +72,63 @@ function setOptions(){
     var complId = $('select[name="complectations"]').val();
     $.ajax('/options', { data: {modelId: modelId, complId: complId} }).done(window.CarsApp.getOptions);
 
-    $('select[name="options"]').html('').css('display', 'inline-block');
+    $('.options').removeClass('hidden');
+    $('#car-constructor .callout').addClass('hidden');
+    $('.btn-save').html('');
     changePrice();
 }
 
 function goNext(){
-    var credit = '<button onclick="calcCredit()">Credit</button>',
-        saveCar = '<input type="submit" value="Save Car"/>';
-    $('#car-constructor div').html(saveCar);
+    var credit = '<button class="button" onclick="getBanks()">Переглянути</button>',
+        saveCar = '<button class="success button" onclick="saveCar()">Зберегти</button>';
+    $('#car-constructor .callout').removeClass('hidden');
+    $('.credit-info').removeClass('hidden');
+    $('.btn-save').html(saveCar);
     $('#next-steps').html(credit);
     changePrice();
 }
 
-function calcCredit(){
+function getBanks(){
     $.ajax('/bank').done(window.CreditApp.setBanks);
-    $('select[name="banks"]').css('display', 'inline-block');
+    
+    $('.banks').removeClass('hidden');
+    $('.credit-info').addClass('hidden');
+    $('#credit-calculator .callout').addClass('hidden');
+    $('#next-steps').html('');
 }
 
 function setPayments(){
     var bankId = $('select[name="banks"]').val();
     $.ajax('/payments', { data: {bankId: bankId} }).done(window.CreditApp.setPayments);
 
-    $('select[name="payment"]').html('').css('display', 'inline-block');
-    $('select[name="period"]').html('').css('display', 'none');
-    $('.interest').html('').css('display', 'none');
+    $('.payments').removeClass('hidden');
+    $('select[name="payment"]').html('');
+    $('.periods').addClass('hidden');
+    $('select[name="period"]').html('');
+    $('.interests').addClass('hidden');
+    $('.interest').html('');
+    $('#credit-calculator .callout').addClass('hidden');
 }
 
 function setPeriods(){
     var bankId = $('select[name="banks"]').val();
         
     $.ajax('/period', { data: {bankId: bankId} }).done(window.CreditApp.setPeriods);
-    $('select[name="period"]').html('').css('display', 'inline-block');
-    $('.interest').html('').css('display', 'none');
+
+    $('.periods').removeClass('hidden');
+    $('select[name="period"]').html('');
+    $('.interests').addClass('hidden');
+    $('.interest').html('');
+
+    $('#credit-calculator .callout').css('display', 'none');
 
 }
 
-function getInterest(){
+function setInterest(){
     var bankId     = $('select[name="banks"]').val(),
         paymentId  = $('select[name="payment"]').val(),
         periodId   = $('select[name="period"]').val(),
-        calcButton = '<button onclick="calcCredit()">Calc Credit</button>';
+        calcButton = '<button class="success button" onclick="calcCredit()">Розрахувати</button>';
     $.ajax('/interest', {
         data: {
             bankId: bankId,
@@ -104,9 +137,58 @@ function getInterest(){
         }
     }).done(window.CreditApp.setInterest);
 
-    $('.interest').html('').css('display', 'inline-block');
-    $('#final-steps').html(calcButton);
+    $('.interests').removeClass('hidden');
+    $('#credit-calculator .callout').removeClass('hidden');
+    $('#credit-calculator .btn-calc').html(calcButton);
 }
 
+function saveCar(){
+    var car = {
+        model: $('select[name="models"]').val(),
+        compl: $('select[name="complectations"]').val(),
+        engines: $('select[name="engines"]').val(),
+        colors: $('select[name="colors"]').val(),
+        options: $('select[name="options"]').val(),
+        date: new Date(),
+        userId: null
+    };
+    $.ajax({
+        method: 'post',
+        url: '/savecar',
+        data: car
+    }).done(function(success){
+        var message = '';
+        if (success){
+            message = '<h4 class="success-msg">'
+                        +'<i class="fa fa-floppy-o" aria-hidden="true"></i>'
+                        +'Your car successfully saved!</h4>'
+        } else {
+            message = '<h4 class="failed-msg">'
+                        +'<i class="fa fa-times-circle" aria-hidden="true"></i>'
+                        +'Something goes wrong. Please, try again.</h4>'
+        }
+        $('#car-constructor .callout').html(message);
+        $('.btn-save').css('display', 'none');
+    });
+}
 
+function calcCredit() {
+    var data = {
+        price: $('#price-js').text(),
+        bank: $('select[name="banks"]').val(),
+        payment: $('select[name="payment"]').val(),
+        period: $('select[name="period"]').val(),
+        interest: $('.interest').attr("data-id")
+    };
 
+    $.ajax({
+        method: 'post',
+        url: '/credit',
+        data: data
+    }).done(function(value){
+        // var result = [value];
+        //
+        // $('#credit-calculator div').html(result.join(''));
+        console.log('done');
+    });
+}

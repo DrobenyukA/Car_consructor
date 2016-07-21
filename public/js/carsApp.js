@@ -11,7 +11,7 @@ $(function () {
          * Render select with cars models
          */
         var getCarsModels = function(data){
-            var models = '<option value="0">Оберіть модель</option>';
+            var models = '<option value="0">Модель</option>';
 
             for (var i = 0; i < data.length; ++i) {
                 models += '<option value="' + data[i].model_id + 
@@ -23,7 +23,7 @@ $(function () {
         };
         
         var getCarsComplectation = function(data){
-            var complectation = '<option value="0">Оберіть коплектацію</option>';
+            var complectation = '<option value="0">Коплектація</option>';
 
             for (var i = 0; i < data.length; ++i) {
                 complectation += '<option value="' + data[i].compl_id +
@@ -35,7 +35,7 @@ $(function () {
         };
         
         var getCarsEngine = function(data){
-            var engine = '<option value="0">Оберіть Двигун</option>';
+            var engine = '<option value="0">Двигун</option>';
 
             for (var i = 0; i < data.length; ++i) {
                 engine += '<option value="' + data[i].engine_id +
@@ -51,12 +51,12 @@ $(function () {
         };
 
         var getColors = function(data){
-            var colors = '<option value="0">Оберіть Колір</option>',
+            var colors = '<option value="0">Колір</option>',
                 modelId = $('select[name="models"]').val(),
                 price = null;
 
             for (var i = 0; i < data.length; ++i) {
-                colors += '<option value="' + data[i].color_id;
+                colors += '<option style="background: '+ data[i].color_value +'" value="' + data[i].color_id;
 
                 for (var j = 0; j < data[i].cars.length; j++){
 
@@ -66,7 +66,6 @@ $(function () {
 
                 }
                 colors += data[i].color_name +
-                       '<span style="background: '+ data[i].color_value +'">'+data[i].color_value+'</span>' +
                     '</option>';
             }
             $('select[name="colors"]').html(colors);
@@ -74,7 +73,7 @@ $(function () {
         };
 
         var getOptions = function(data){
-            var options = '<option value="0">Оберіть Опцію</option>';
+            var options = '<option value="0">Додаткова Опція</option>';
 
             for (var i = 0; i < data.length; ++i) {
                 options += '<option value="' + data[i].option_id +

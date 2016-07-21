@@ -1,71 +1,76 @@
 /**
- * Created by Drobenyuk.A on 09.07.16.
+ * Created by Drobenyuk.A on 19.07.16.
  */
-var fs = require('fs');
-var logger = require('./../services/Logger');
+
+var dataService = require('../services/DataService.js');
 
 module.exports = (function() {
+        //var price = parseInt(params.price);
 
-    var getData = function (path) {
-        try{
-            var result = fs.readFileSync(path, 'utf8');
-            return JSON.parse(result);
-        } catch(e) {
-            logger.logError("Module: CreditCalculator | Can't read from file");
-            return [];
-        }
-    };
+    var getCreditPayment = function(params){
+        var result = {};
+        var price = parseInt(params.price);
+        var payment = getPaymentValue(params.payment);
+        var period = getPeriodValue(params.period);
+        var interest = getInterestValue(params.interest);
 
-    var getBanks = function (){
-        var path = './data/banks.json';
-        return getData(path);
-    };
-
-    var getPayments = function(params){
-        var path   = './data/payments.json',
-            data   = getData(path),
-            result = [];
+        // get first payment;
+        var paymentValue = price * parseInt(payment[0].payment_value) / 100;
+        result.fistPayment = paymentValue;
         
-        for (var i = 0; i < data.length; i++){
-            if (data[i].bank_id === parseInt(params.bankId)){
-                result.push(data[i]);
-            }
-        }
-        return result;
+        // get KASKO
+        var kasko = price * parseInt(payment[0].payment_insurance) / 100;
+        result.kasko = kasko;
+        
+        //get first comission
+        var comission = (price - paymentValue) * parseFloat(payment[0].payment_comission) / 100;
+        result.comission = comission;
+
+        console.log(result);
     };
     
-    var getPeriods = function(params){
-        var path   = './data/periods.json',
-            data   = getData(path),
-            result = [];
-        
-        for (var i = 0; i < data.length; i++){
-            if (data[i].bank_id === parseInt(params.bankId)){
+    var getPaymentValue = function (instance){
+        var result = [],
+            path = './data/payments.json',
+            data = dataService.getData(path);
+        for(var i = 0; i < data.length; i++){
+            if (data[i].payment_id === parseInt(instance)){
                 result.push(data[i]);
             }
         }
         return result;
     };
 
-    var getInterest = function(params){
-        var path   = './data/interests.json',
-            data   = getData(path),
-            result = [];
-        for (var i = 0; i < data.length; i++){
-            if ((data[i].bank_id === parseInt(params.bankId))
-                && (data[i].payment_id === parseInt(params.paymentId))
-                && (data[i].periods_id === parseInt(params.periodId))){
+    var getPeriodValue = function(instance){
+        var result = [],
+            path = './data/periods.json',
+            data = dataService.getData(path);
+        for(var i = 0; i < data.length; i++){
+            if (data[i].periods_id === parseInt(instance)){
                 result.push(data[i]);
             }
         }
         return result;
+    };
+
+    var getInterestValue = function (instance){
+        var result = [],
+            path = './data/interests.json',
+            data = dataService.getData(path);
+        for(var i = 0; i < data.length; i++){
+            if (data[i].interests_id === parseInt(instance)){
+                result.push(data[i]);
+            }
+        }
+        return result;
+    };
+
+    var getFirstPayment = function(instance){
+
     };
 
     return{
-        getBanks: getBanks,
-        getPayments: getPayments,
-        getPeriods: getPeriods,
-        getInterest: getInterest
+        getCreditPayment: getCreditPayment
     }
 
 })();

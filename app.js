@@ -4,7 +4,8 @@
 var express     = require('express'),
     bodyParser  = require('body-parser'),
     car         = require('./models/CarConstructor.js'),
-    credit      = require('./models/CreditCalculator.js'),
+    credit      = require('./models/BankConstructor.js'),
+    creditCalc  = require('./models/CreditCalculator.js'),
     dataService = require('./services/DataService.js'),
     app         = express();
 
@@ -48,15 +49,12 @@ app.get('/interest', function (req, res){
     res.send(credit.getInterest(req.query));
 });
 
-// TODO fix this issue with post method
-app.post('/savecartodb', function(req, res){
-    var success = dataService.saveCar(req.body);
-    console.log(req.body);
-    if(success){
-        res.redirect('/?success=true');
-    } else{
-        res.redirect('/?success=false');
-    }
+app.post('/savecar', function(req, res){
+    res.send(dataService.saveData(req.body));
+});
+
+app.post('/credit', function(req, res){
+    res.send(creditCalc.getCreditPayment(req.body));
 });
 
 app.listen(8000, function () {
