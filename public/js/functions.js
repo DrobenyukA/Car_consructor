@@ -189,6 +189,6 @@ function calcCredit() {
         // var result = [value];
         //
         // $('#credit-calculator div').html(result.join(''));
-        console.log('done');
+        console.log(value);
     });
 }

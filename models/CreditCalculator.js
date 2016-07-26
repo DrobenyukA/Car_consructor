@@ -5,9 +5,10 @@
 var dataService = require('../services/DataService.js');
 
 module.exports = (function() {
-        //var price = parseInt(params.price);
+    
 
     var getCreditPayment = function(params){
+
         var result = {};
         var price = parseInt(params.price);
         var payment = getPaymentValue(params.payment);
@@ -18,15 +19,30 @@ module.exports = (function() {
         var paymentValue = price * parseInt(payment[0].payment_value) / 100;
         result.fistPayment = paymentValue;
         
-        // get KASKO
+        // get KASKO value
         var kasko = price * parseInt(payment[0].payment_insurance) / 100;
         result.kasko = kasko;
         
-        //get first comission
-        var comission = (price - paymentValue) * parseFloat(payment[0].payment_comission) / 100;
-        result.comission = comission;
+        //get first commission
+        var commission = (price - paymentValue) * parseFloat(payment[0].payment_comission) / 100;
+        result.comission = commission;
 
-        console.log(result);
+        /**
+         * Annuity
+         * source
+         * http://damoney.ru/bank/38_formula_annuitet.php
+         */
+        var i = interest[0].interests_value / 1200;
+        var n = period[0].periods_value;
+        var upperPart = i * Math.pow((1 + i), n);
+        var lowerPart = Math.pow((1 + i), n) - 1;
+
+        var coefficient = upperPart / lowerPart;
+
+        var monthPayment = coefficient * (price - paymentValue + kasko + commission);
+        result.monthPayment = monthPayment;
+        
+        return result;
     };
     
     var getPaymentValue = function (instance){
@@ -63,10 +79,6 @@ module.exports = (function() {
             }
         }
         return result;
-    };
-
-    var getFirstPayment = function(instance){
-
     };
 
     return{
