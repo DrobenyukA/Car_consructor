@@ -6,6 +6,8 @@
 1. Онлайн-конструктор автомобіля за вибором користувача.
 2. Автоматичний підрахунок вартості автомобіля.
 3. Калькулятор варстості автомобіля при купівлі в кредит.
+4. Тривимірний огляд автомобіля.
+5. Можливість збереження конфігурації авто для конкретного коритсувача.
 
 ## Типи даних
 ### *Конструктор автомобіля буде оперувати такими типами даний*:
@@ -28,21 +30,21 @@
 Файл _models.json_:
 ``` JSON 
 { 
-  "model_id": 1,
-  "model_name": "Rapid",
-  "model_price": 396832
+  "id": 1,
+  "name": "Rapid",
+  "price": 396832
 }
 ```
 Файл _engines.json_:
 ``` JSON
 {
-  "engine_id":1,
-  "engine_type": "TSI",
-  "engine_fuel": "бензин",
-  "engine_volume": "1.2",
-  "engine_power": "81 kW",
-  "gearbox_type": "мех.",
-  "gearbox_steps": "5-cт.",
+  "id":1,
+  "type": "TSI",
+  "fuel": "бензин",
+  "volume": "1.2",
+  "power": "81 kW",
+  "type": "мех.",
+  "steps": "5-cт.",
   "model_id": 1,
   "compl_id": 1,
   "price": 396832
@@ -51,19 +53,19 @@
 Файл _complectations.json_:
 ``` JSON
 {
-  "compl_id": 1,
-  "compl_name": "Style",
-  "model_id": 1,
-  "price": 396832
+  "id": 1,
+  "name": "Style",
+  "price": 396832,
+  "model_id": 1
 }
 ```
 Файл _colors.json_:
 ``` JSON
 {
-    "color_id": 1,
-    "color_name": "Pacific",
-    "color_value": "#0000ff",
-    "color_type": "Глянець",
+    "id": 1,
+    "name": "Pacific",
+    "value": "#0000ff",
+    "type": "Глянець",
     "cars": [
       {
         "model_id": 1,
@@ -79,45 +81,45 @@
 Файл _options.json_:
 ``` JSON
 {
-  "option_id": 1,
-  "option_name": "'PROPELLER' 6J x 15",
-  "option_description": "Легкосплавные диски 4шт.",
+  "id": 1,
+  "name": "'PROPELLER' 6J x 15",
+  "description": "Легкосплавные диски 4шт.",
+  "price": 893,
   "model_id": 1,
-  "compl_id": 1,
-  "price": 893
+  "compl_id": 1
 }
 ```
 Файл _banks.json_:
 ``` JSON
 {
-  "bank_id": 1,
-  "bank_name": "Credit Agricole",
+  "id": 1,
+  "name": "Credit Agricole",
 }
 ```
 Файл _payments.json_:
 ``` JSON
 {
-  "payment_id": 1,
-  "payment_value": 30,
-  "payment_comission": 2.99,
-  "payment_month_comission": 0,
-  "payment_insurance": 7,
+  "id": 1,
+  "value": 30,
+  "comission": 2.99,
+  "month_comission": 0,
+  "insurance": 7,
   "bank_id": 1
 }
 ```
 Файл _periods.json_:
 ``` JSON
 {
-  "periods_id": 1,
-  "periods_value": 6,
+  "id": 1,
+  "value": 6,
   "bank_id": 1
 }
 ```
 Файл _interests.json_:
 ``` JSON
 {
-  "interests_id": 1,
-  "interests_value": 16.7,
+  "id": 1,
+  "value": 16.7,
   "bank_id": 1,
   "payment_id": 1,
   "periods_id": 1
@@ -129,21 +131,26 @@ aplication/
 ├── data/
 │   └── *.json
 ├── models/
-│   ├── car-constuctor.js
-│   └── credit-calculator.js
+│   ├── CarConstuctor.js
+│   ├── BankConstuctor.js
+│   └── CreditCalculator.js
 ├── public/
 │   ├── css/
+│   │   └── *.css
+│   ├── js/
+│   │   ├── AppView.js
+│   │   ├── CarView.js
+│   │   ├── BankView.js
 │   │   └── *.css
 │   ├── libs/
 │   │   ├── bootstrap.js
 │   │   └── jquery.js
-│   └── fonts/
-│       ├── *.ttf
-│       ├── *.woff
-│       └── *.eot
-├── controllers/
-│   └── *-controller.js
+│   └── libs/
+│       ├── carusel/
+│       ├── fontawesome/
+│       └── foundation
 ├── services/
+│   ├── DataService.js
 │   └── logger.js
 ├── tests/
 │   ├── data/
@@ -154,5 +161,15 @@ aplication/
 ├── app.js
 └── package.json/
 ```
+Основні залежності:
+
+[Node.js](https://nodejs.org/en/) v5.11.0
+
+[Express](http://expressjs.com/) 4.14.0
+
+#### Для запуску необхідно ввести команду `node app.js`
+
+##Увага!
+Перед запуском програми не забудьте встановити пакети залежностей `npm install`
 
 Джерела: [Єврокар](http://cc-cloud.skoda-auto.com/ukr/ukr/uk-ua "Конфігуратор"), [Прага авто](http://praga-auto.com.ua/20/skoda_v_credit/ "Кредити")
