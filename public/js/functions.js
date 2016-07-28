@@ -1,7 +1,6 @@
 /**
  * Created by Drobenyuk.A on 17.07.16.
  */
-$(".car-preview").brazzersCarousel();
 
 function changePrice() {
     var modelId = $('select[name="models"]').val();
@@ -20,10 +19,23 @@ function changePrice() {
     $('input[name="price"]').val(totalPrice);
 }
 
+function showCar(model){
+    var result = '',
+        path = 'img/car-' + model + '/';
+    for (var i = 0; i < 11; i++){
+        result +='<img src="' + path + i +'.png" alt="car-'+i+'">';
+    }
+
+    $('.car-preview').html(result);
+    $(".car-preview").brazzersCarousel();
+}
+
 function setComplectation(){
     var modelId = $('select[name="models"]').val();
     $.ajax('/complectations', { data: {modelId: modelId} }).done(window.CarsApp.getCarsComplectation);
-    
+
+    showCar(modelId);
+
     $('.compl').removeClass('hidden');
     $('select[name="complectations"]').html('');
     $('.engine').addClass('hidden');
