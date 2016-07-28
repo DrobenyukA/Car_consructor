@@ -136,12 +136,13 @@ aplication/
 │   └── CreditCalculator.js
 ├── public/
 │   ├── css/
-│   │   └── *.css
+│   │   └── style.css
+│   ├── img/
+│   │   └── *.*
 │   ├── js/
 │   │   ├── AppView.js
 │   │   ├── CarView.js
-│   │   ├── BankView.js
-│   │   └── *.css
+│   │   └── BankView.js
 │   ├── libs/
 │   │   ├── bootstrap.js
 │   │   └── jquery.js
