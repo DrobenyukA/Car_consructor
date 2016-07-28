@@ -1,6 +1,7 @@
 /**
  * Created by Drobenyuk.A on 17.07.16.
  */
+$(".car-preview").brazzersCarousel();
 
 function changePrice() {
     var modelId = $('select[name="models"]').val();
@@ -185,10 +186,25 @@ function calcCredit() {
         method: 'post',
         url: '/credit',
         data: data
-    }).done(function(value){
-        // var result = [value];
-        //
-        // $('#credit-calculator div').html(result.join(''));
-        console.log(value);
+    }).done(function (content) {
+        printCreditData(content);
     });
+}
+
+function printCreditData(data){
+    var content = [
+        '<h3>Ваш результат:</h3>',
+        '<table>',
+        '<tbody>',
+        '<tr><th>Початковий внесок:</th><td>',
+        data.fistPayment.toFixed(2),
+        ' грн.</td></tr><tr><th>Разова комісія</th><td>',
+        data.comission.toFixed(2),
+        ' грн.</td></tr><tr><th>Страхування:</th><td>',
+        data.kasko.toFixed(2),
+        ' грн.</td></tr><tr><th>Місячний платіж:</th><td>',
+        data.monthPayment.toFixed(2),
+        ' грн.</td></tr></tbody></table>'
+    ].join('');
+    $('#credit-result').html(content);
 }

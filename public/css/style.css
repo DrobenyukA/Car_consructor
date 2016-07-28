@@ -17,8 +17,7 @@ header .columns{
     top: 8px;
     width:155px;
     height:124px;
-    background-image: url('../img/skoda-logo.png');
-    background-repeat: no-repeat;
+    background: url('../img/skoda-logo.png') no-repeat;
 }
 
 nav{
@@ -42,6 +41,10 @@ label{
     display: none;
 }
 
+#car-constructor,
+#credit-calculator{
+    min-height: 28vh;
+}
 #car-constructor select[name="colors"] option span{
     display: inline-block;
     width: 15px;
@@ -86,20 +89,6 @@ h4{
     padding: .5rem;
     border: 1px solid #cacaca;
     margin: 0 0 1rem;
-    font-size: 1rem;
-    font-family: inherit;
-    line-height: normal;
-    color: #0a0a0a;
-    background-color: #fefefe;
-    border-radius: 1px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1…ts='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
-    background-size: 9px 6px;
-    background-position: right -1rem center;
-    background-origin: content-box;
-    background-repeat: no-repeat;
-    padding-right: 1.5rem;
 }
 
 footer{
