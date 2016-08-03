@@ -7,78 +7,74 @@ $(function () {
             $.ajax('/cars').done(getCarsModels);
         };
         
-        /**
-         * Render select with cars models
-         */
-        var getCarsModels = function(data){
-            var models = '<option value="0">Модель</option>';
+        var getCarsModels = function(models){
+            var options = '<option value="0">Модель</option>';
 
-            for (var i = 0; i < data.length; ++i) {
-                models += '<option value="' + data[i].model_id + 
-                                '" data-price="' + data[i].model_price + '">' +
-                                data[i].model_name + 
+            for (var i = 0; i < models.length; ++i) {
+                options += '<option value="' + models[i].id +
+                                '" data-price="' + models[i].price + '">' +
+                                models[i].name +
                            '</option>';
             }
-            $('select[name="models"]').html(models);
+            $('select[name="models"]').html(options);
         };
         
-        var getCarsComplectation = function(data){
-            var complectation = '<option value="0">Коплектація</option>';
+        var getCarsComplectation = function(compls){
+            var options = '<option value="0">Коплектація</option>';
 
-            for (var i = 0; i < data.length; ++i) {
-                complectation += '<option value="' + data[i].compl_id +
-                    '" data-price="' + data[i].price + '">' +
-                    data[i].compl_name +
+            for (var i = 0; i < compls.length; ++i) {
+                options += '<option value="' + compls[i].id +
+                    '" data-price="' + compls[i].price + '">' +
+                    compls[i].name +
                     '</option>';
             }
-            $('select[name="complectations"]').html(complectation);
+            $('select[name="complectations"]').html(options);
         };
         
-        var getCarsEngine = function(data){
-            var engine = '<option value="0">Двигун</option>';
+        var getCarsEngine = function(engines){
+            var options = '<option value="0">Двигун</option>';
 
-            for (var i = 0; i < data.length; ++i) {
-                engine += '<option value="' + data[i].engine_id +
-                    '" data-price="' + data[i].price + '">' +
-                    data[i].engine_volume + ' ' +
-                    data[i].engine_type + ' (' + data[i].engine_fuel + ') ' +
-                    data[i].engine_power + ' ' +
-                    data[i].gearbox_steps + data[i].gearbox_type +
+            for (var i = 0; i < engines.length; ++i) {
+                options += '<option value="' + engines[i].id +
+                    '" data-price="' + engines[i].price + '">' +
+                    engines[i].volume + ' ' +
+                    engines[i].type + ' (' + engines[i].fuel + ') ' +
+                    engines[i].power + ' ' +
+                    engines[i].gearbox +
                     '</option>';
             }
 
-            $('select[name="engine"]').html(engine);
+            $('select[name="engine"]').html(options);
         };
 
-        var getColors = function(data){
-            var colors = '<option value="0">Колір</option>',
+        var getColors = function(colors){
+            var options = '<option value="0">Колір</option>',
                 modelId = $('select[name="models"]').val(),
                 price = null;
+            for (var i = 0; i < colors.length; ++i) {
+                options += '<option style="background: '+ colors[i].value +'" value="' + colors[i].id;
 
-            for (var i = 0; i < data.length; ++i) {
-                colors += '<option style="background: '+ data[i].color_value +'" value="' + data[i].color_id;
+                for (var j = 0; j < colors[i].cars.length; j++){
 
-                for (var j = 0; j < data[i].cars.length; j++){
-
-                    if (parseInt(modelId) === parseInt(data[i].cars[j].model_id)){
-                        colors += '" data-price="' + data[i].cars[j].price + '">';
+                    if (parseInt(modelId) === parseInt(colors[i].cars[j].model_id)){
+                        options += '" data-price="' + colors[i].cars[j].price + '">';
                      }
 
                 }
-                colors += data[i].color_name +
+                options += colors[i].name +
                     '</option>';
             }
-            $('select[name="colors"]').html(colors);
+            $('select[name="colors"]').html(options);
 
         };
 
-        var getOptions = function(data){
+        var getOptions = function(addOptions){
             var options = '<option value="0">Додаткова Опція</option>';
 
-            for (var i = 0; i < data.length; ++i) {
-                options += '<option value="' + data[i].option_id +
-                    '" data-price="' + data[i].price + '">' +
-                    data[i].option_name +
+            for (var i = 0; i < addOptions.length; ++i) {
+                options += '<option value="' + addOptions[i].id +
+                    '" data-price="' + addOptions[i].price + '">' +
+                    addOptions[i].name +
                     '</option>';
             }
             $('select[name="options"]').html(options);

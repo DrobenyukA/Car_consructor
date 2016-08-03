@@ -8,41 +8,36 @@ module.exports = (function() {
     
 
     var getCreditPayment = function(params){
-
-        var result = {};
-        var price = parseInt(params.price);
-        var payment = getPaymentValue(params.payment);
-        var period = getPeriodValue(params.period);
-        var interest = getInterestValue(params.interest);
-
-        // get first payment;
-        var paymentValue = price * parseInt(payment[0].payment_value) / 100;
-        result.fistPayment = paymentValue;
+        var price    = parseFloat(params.priceVal),
+            payment  = getPaymentValue(params.paymentId),
+            period   = getPeriodValue(params.periodId),
+            interest = getInterestValue(params.interestVal);
         
-        // get KASKO value
-        var kasko = price * parseInt(payment[0].payment_insurance) / 100;
-        result.kasko = kasko;
+        var fistPayment = price * parseInt(payment[0].value) / 100;
+
+        var kasko = price * parseInt(payment[0].insurance) / 100;
+
+        var commission = (price - fistPayment) * parseFloat(payment[0].comission) / 100;
         
-        //get first commission
-        var commission = (price - paymentValue) * parseFloat(payment[0].payment_comission) / 100;
-        result.comission = commission;
 
         /**
-         * Annuity
+         * Annuity calculation
          * source
          * http://damoney.ru/bank/38_formula_annuitet.php
          */
-        var i = interest[0].interests_value / 1200;
-        var n = period[0].periods_value;
+        var i = interest[0].value / 1200;
+        var n = period[0].value;
         var upperPart = i * Math.pow((1 + i), n);
         var lowerPart = Math.pow((1 + i), n) - 1;
-
         var coefficient = upperPart / lowerPart;
-
-        var monthPayment = coefficient * (price - paymentValue + kasko + commission);
-        result.monthPayment = monthPayment;
+        var monthPayment = coefficient * (price - fistPayment + kasko + commission);
         
-        return result;
+        return {
+            fistPayment: fistPayment,
+            kasko: kasko,
+            commission: commission,
+            monthPayment: monthPayment
+        };
     };
     
     var getPaymentValue = function (instance){
@@ -50,7 +45,7 @@ module.exports = (function() {
             path = './data/payments.json',
             data = dataService.getData(path);
         for(var i = 0; i < data.length; i++){
-            if (data[i].payment_id === parseInt(instance)){
+            if (data[i].id === parseInt(instance)){
                 result.push(data[i]);
             }
         }
@@ -62,7 +57,7 @@ module.exports = (function() {
             path = './data/periods.json',
             data = dataService.getData(path);
         for(var i = 0; i < data.length; i++){
-            if (data[i].periods_id === parseInt(instance)){
+            if (data[i].id === parseInt(instance)){
                 result.push(data[i]);
             }
         }
@@ -74,7 +69,7 @@ module.exports = (function() {
             path = './data/interests.json',
             data = dataService.getData(path);
         for(var i = 0; i < data.length; i++){
-            if (data[i].interests_id === parseInt(instance)){
+            if (data[i].id === parseInt(instance)){
                 result.push(data[i]);
             }
         }

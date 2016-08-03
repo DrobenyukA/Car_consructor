@@ -14,7 +14,12 @@ module.exports = (function(){
         var path = './data/models.json';
         return dataService.getData(path);
     };
-    
+
+    /**
+     * Complectations manager
+     * @param params
+     * @returns {Array}
+     */
     var getComplectations = function (params) {
         var path   = './data/complectations.json',
             data   = dataService.getData(path),
@@ -27,7 +32,12 @@ module.exports = (function(){
         }
         return result;
     };
-    
+
+    /**
+     * Engines manager
+     * @param params
+     * @returns {Array}
+     */
     var getEngines = function(params){
         var path   = './data/engines.json',
             data   = dataService.getData(path),
@@ -42,6 +52,11 @@ module.exports = (function(){
         return result;
     };
 
+    /**
+     * Colors manager
+     * @param params
+     * @returns {Array}
+     */
     var getColors = function(params){
         var path   = './data/colors.json',
             data   = dataService.getData(path),
@@ -57,7 +72,12 @@ module.exports = (function(){
         return result;
 
     };
-
+    
+    /**
+     * Options manager
+     * @param params
+     * @returns {Array}
+     */
     var getOptions = function(params){
         var path   = './data/options.json',
             data   = dataService.getData(path),

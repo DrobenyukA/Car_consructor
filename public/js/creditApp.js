@@ -5,36 +5,35 @@
 $(function(){
    window.CreditApp = (function(){
        
-       var setBanks = function(data){
-           var banks = '<option value="0">Оберіть банк</option>';
+       var setBanks = function(banks){
+           var options = '<option value="0">Оберіть банк</option>';
            
-           for (var i = 0; i < data.length; ++i) {
-               banks += '<option value="' + data[i].bank_id + '">' +
-                   data[i].bank_name +
+           for (var i = 0; i < banks.length; ++i) {
+               options += '<option value="' + banks[i].id + '">' +
+                   banks[i].name +
                    '</option>';
            }
 
-           $('select[name="banks"]').html(banks);
+           $('select[name="banks"]').html(options);
        };
 
-       var setPayments = function(data){
-           var payments = '<option value="0">Оберіть початковий внесок</option>'
+       var setPayments = function(payments){
+           var options = '<option value="0">Оберіть початковий внесок</option>'
 
-           for (var i = 0; i < data.length; ++i) {
-               payments += '<option value="' + data[i].payment_id + '">' +
-                   + data[i].payment_value + "% від вартості" +
+           for (var i = 0; i < payments.length; ++i) {
+               options += '<option value="' + payments[i].id + '">' +
+                   + payments[i].value + "% від вартості" +
                    '</option>';
            }
-
-           $('select[name="payment"]').html(payments);
+           $('select[name="payment"]').html(options);
        };
         
-       var setPeriods = function(data){
-           var periods    = '<option value="0">Оберіть термін</option>';
+       var setPeriods = function(periods){
+           var options = '<option value="0">Оберіть термін</option>';
 
            
-           for (var i = 0; i < data.length; ++i) {
-               var yearsVal   = data[i].periods_value / 12,
+           for (var i = 0; i < periods.length; ++i) {
+               var yearsVal   = periods[i].value / 12,
                    yearsDescr = '';
 
                switch (yearsVal){
@@ -51,18 +50,18 @@ $(function(){
                    case 6: yearsDescr = "років";
                        break;
                }
-               periods += '<option value="' + data[i].periods_id + '">' +
+               options += '<option value="' + periods[i].id + '">' +
                    + yearsVal + ' '+ yearsDescr +
                    '</option>';
            }
            
-           $('select[name="period"]').html(periods);
+           $('select[name="period"]').html(options);
        };
 
-       var setInterest = function(data){
-           if(data){
-               $('.interest').attr('data-id', data[0].interests_id)
-                   .html(data[0].interests_value);
+       var setInterest = function(interest){
+           if(interest){
+               $('.interest').attr('data-id', interest[0].id)
+                   .html(interest[0].value);
            }
        };
 

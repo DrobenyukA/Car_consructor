@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Car constructor</title>
     <link rel="stylesheet" href="libs/foundation-6.2.3-custom/css/foundation.min.css"/>
     <link rel="stylesheet" href="libs/font-awesome-4.6.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="libs/Carusel/jQuery.Brazzers-Carousel.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
 </head>
 <body>
     <header>
         <div class="row">
             <div class="small-6 medium-8 columns">
                 <h1>Автомобільний конструктор</h1>
-                <h5>v 0.9.0</h5>
             </div>
             <div class="small-6 medium-4 columns">
                 <div class="logo">
@@ -24,12 +27,19 @@
     </header>
     <nav>
         <div class="row">
-            <div class="columns small-12 medium-6 ">
+            <div class="columns small-8">
                 <div class="expanded button-group">
-                    <a href="http://uk.eurocar.com.ua/" class="success button">Джерела</a>
-                    <a href="http://foundation.zurb.com/" class="success button">Фремворк</a>
-                    <a href="https://github.com/DrobenyukA/Car_consructor/pull/1" class="success button">Git</a>
-                    <a href="http://damoney.ru/bank/38_formula_annuitet.php" class="success button">Ануитет</a>
+                    <a href="#" class="success button">Про роботу</a>
+                    <a href="http://uk.eurocar.com.ua/" class="success button">Skoda</a>
+                    <a href="http://foundation.zurb.com/" class="success button">Foundation</a>
+                    <a href="http://damoney.ru/bank/38_formula_annuitet.php" class="success button">Формула</a>
+                    <a href="#" class="success button">GitHub</a>
+                    <a href=""></a>
+                </div>
+            </div>
+            <div class="columns small-4 login">
+                <div class="expanded button-group">
+                    <a href="#" class="success button">Ввійти</a>
                 </div>
             </div>
         </div>
@@ -37,10 +47,12 @@
     <main>
         <div class="main">
             <div class="row">
-                <h3>Курсова робота із курсу JavaScript КА "Шаг"</h3>
-                <p class="lead">
-                    Щоб розпочати оберіть  модель автомобля у відповідному полі.
-                </p>
+                <div class="columns small-12">
+                    <h3>Курсова робота із курсу JavaScript КА "Шаг"</h3>
+                    <p class="lead">
+                        Щоб розпочати оберіть  модель автомобля у відповідному полі.
+                    </p>
+                </div>
             </div>
             <div class="row">
                 <div class="columns small-12 medium-6">
@@ -65,35 +77,34 @@
                             <label>Додаткові опції:</label>
                             <select name="options" onchange="goNext()"></select>
                         </div>
-                        <div class="primary callout hidden">
-                            <i class="fa fa-info" aria-hidden="true"></i>
-                            Якщо Вам припала до душі дана комплектація тисніть
-                            <strong>
-                                "Зберегти"
-                            </strong>
-                        </div>
-                        <div class="btn-save">
 
-                        </div>
                     </div>
                 </div>
                 <div class="columns small-12 medium-6">
                     <h4>Загальна вартість авто: <span id="price-js">0</span> грн</h4>
-                    <div class="car-preview">
-
-                    </div>
+                    <div class="car-preview"></div>
                 </div>
             </div>
-            <div class="row credit-info hidden">
-                <div class="columns small-8 medium-6">
-                    <div class="primary callout">
+            <div class="row notifications hidden">
+                <div class="columns small-12 medium-6 medium-push-6">
+                    <div class="primary callout car-save">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                        Якщо Вам припала до душі дана комплектація тисніть
+                        <strong>
+                            "Зберегти"
+                        </strong>
+                    </div>
+                    <button class="success button btn-save" onclick="saveCar()">Зберегти</button>
+                </div>
+                <div class="columns small-12 medium-6 medium-pull-6">
+                    <div class="primary callout credit-info">
                         <i class="fa fa-info" aria-hidden="true"></i>
                         Щоб переглянути інформацю по кредиту тисніть
                         <strong>
                             "Переглянути"
                         </strong>
                     </div>
-                    <div id="next-steps"></div>
+                    <button class="button btn-credit" onclick="getBanks()">Переглянути</button>
                 </div>
             </div>
             <div class="row">
@@ -116,7 +127,7 @@
                             <label>Відсоткова ставка:</label>
                             <span class="interest"></span>
                         </div>
-                        <div class="primary callout hidden">
+                        <div class="primary callout credit-calc hidden">
                             <i class="fa fa-info" aria-hidden="true"></i>
                             Щоб отримати дані по кредиту тисніть
                             <strong>
@@ -135,12 +146,16 @@
         </div>
     </main>
     <footer>
-        &copy; Drobenyuk.A 2016
+         &copy; Drobenyuk.A 2016
     </footer>
     <script type="text/javascript" src="libs/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="libs/foundation-6.2.3-custom/js/vendor/foundation.min.js"></script>
+    <script type="text/javascript" src="libs/foundation-6.2.3-custom/js/app.js"></script>
+    <script type="text/javascript" src="js/dispatcher.js"></script>
     <script type="text/javascript" src="js/carsApp.js"></script>
     <script type="text/javascript" src="js/creditApp.js"></script>
     <script type="text/javascript" src="libs/Carusel/jQuery.Brazzers-Carousel.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/carsView.js"></script>
+    <script type="text/javascript" src="js/BanksView.js"></script>
 </body>
 </html>

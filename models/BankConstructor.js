@@ -5,12 +5,12 @@ var dataService = require('../services/DataService.js');
 
 module.exports = (function() {
 
-
+    
     var getBanks = function (){
         var path = './data/banks.json';
         return dataService.getData(path);
     };
-
+    
     var getPayments = function(params){
         var path   = './data/payments.json',
             data   = dataService.getData(path),
@@ -41,6 +41,7 @@ module.exports = (function() {
         var path   = './data/interests.json',
             data   = dataService.getData(path),
             result = [];
+        
         for (var i = 0; i < data.length; i++){
             if ((data[i].bank_id === parseInt(params.bankId))
                 && (data[i].payment_id === parseInt(params.paymentId))
