@@ -6,6 +6,7 @@ var express     = require('express'),
     car         = require('./models/CarConstructor.js'),
     credit      = require('./models/BankConstructor.js'),
     creditCalc  = require('./models/CreditCalculator.js'),
+    usersModule = require('./models/UsersModule'),
     dataService = require('./services/DataService.js'),
     app         = express();
 
@@ -49,12 +50,27 @@ app.get('/interest', function (req, res){
     res.send(credit.getInterest(req.query));
 });
 
-app.post('/savecar', function(req, res){
-    res.send(dataService.saveData(req.body));
-});
-
 app.post('/credit', function(req, res){
     res.send(creditCalc.getCreditPayment(req.body));
+});
+
+app.post('/savecar', function(req, res){
+    //TODO rewrite method to save car
+    var dbPath = './data/custom-cars.json';
+
+    res.send(dataService.saveData(dbPath, req.body));
+});
+
+app.post('/registered', function (req, res) {
+    res.send(usersModule.registered(req.body)) ;
+});
+
+app.post('/authenticate', function (req, res) {
+    res.send(usersModule.authenticate(req.body)) ;
+});
+
+app.post('/checklogin', function (req, res) {
+    res.send(usersModule.isAvailableLogin(req.body)) ;
 });
 
 app.listen(8000, function () {

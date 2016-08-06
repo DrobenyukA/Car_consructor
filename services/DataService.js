@@ -11,29 +11,32 @@ module.exports = (function(){
             var result = fs.readFileSync(path, 'utf8');
             return JSON.parse(result);
         } catch(e) {
-            logger.logError("Can't read from file");
+            logger.logError("Can't read from file |" + path + "|");
             return [];
         }
     };
     
     
-    var saveData = function(params){
-        var result = false,
-            dbPath = './data/custom-cars.json';
+    var saveData = function(dbPath, params){
+        var result = false;
         
         if (!params){
             return result;
         };
 
+        var data = getData(dbPath);
+        data.push(params);
+
         try{
             fs.writeFileSync(
                 dbPath,
-                JSON.stringify(params),
+                JSON.stringify(data),
                 { flag: 'w+' }
             );
         } catch(e) {
-            logger.logError('Failed save params to file, params: ' + JSON.stringify(params));
+            logger.logError('Failed save params to '+ dbPath +' | params: ' + JSON.stringify(params));
         }
+        
         result = true;
 
         return result

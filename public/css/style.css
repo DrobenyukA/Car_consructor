@@ -23,6 +23,14 @@ header .columns{
     background: url('../img/skoda-logo.png') no-repeat;
 }
 
+header a {
+    float: right;
+}
+
+.error{
+    color: red;
+}
+
 nav{
     background-color: #41a821;
 }
@@ -48,6 +56,12 @@ label{
 
 .hidden{
     display: none;
+}
+
+.login h5,
+header h5{
+    font-weight: bold;
+    color: #41a821;
 }
 
 #car-constructor,
