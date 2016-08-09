@@ -176,7 +176,7 @@ function calcCredit() {
         bankId      = $('select[name="banks"]').val(),
         paymentId   = $('select[name="payment"]').val(),
         periodId    = $('select[name="period"]').val(),
-        interestVal = $('.interest').attr("data-id");
+        interestVal = $('.interest-input').attr("data-id");
 
 
     dispatcher.notify({

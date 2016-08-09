@@ -22,12 +22,12 @@ module.exports = function (user) {
     var checkLogin = function (email) {
         return email === user.email;
     };
-
+    
     return {
         getId: getId,
         isCurrentUser: isCurrentUser,
         getFullName: getFullName,
         isAdmin: isAdmin,
-        checkLogin: checkLogin
+        checkLogin: checkLogin,
     }
 };

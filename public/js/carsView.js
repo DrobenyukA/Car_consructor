@@ -230,25 +230,36 @@ function saveCar(){
         colors: $('select[name="colors"]').val(),
         options: $('select[name="options"]').val(),
         date: new Date(),
-        userId: null
+        user: sessionStorage.getItem('user_name')
     };
 
-    $.ajax({
-        method: 'post',
-        url: '/savecar',
-        data: car
-    }).done(function(success){
-        var message = '';
-        if (success){
-            message = '<h4 class="success-msg">'
-                +'<i class="fa fa-floppy-o" aria-hidden="true"></i>'
-                +'Your car successfully saved!</h4>'
-        } else {
-            message = '<h4 class="failed-msg">'
-                +'<i class="fa fa-times-circle" aria-hidden="true"></i>'
-                +'Something goes wrong. Please, try again.</h4>'
-        }
-        $('.car-save').html(message);
-        $('.btn-save').css('display', 'none');
-    });
+    if (!car.user){
+        alert('Please log in!');
+    } else {
+        $.ajax({
+            method: 'post',
+            url: '/savecar',
+            data: car
+        }).done(function(success){
+            var message = '';
+            if (success){
+                message = '<h4 class="success-msg">'
+                    +'<i class="fa fa-floppy-o" aria-hidden="true"></i>'
+                    +'Your car successfully saved!</h4>';
+                setTimeout(function(){
+                    oldText = '<i class="fa fa-info" aria-hidden="true"></i>'
+                        +'Якщо Вам припала до душі дана комплектація тисніть<strong>"Зберегти"</strong>';
+                    $('.notifications').addClass('hidden');
+                    $('.car-save').html(oldText);
+                    $('.btn-save').css('display', 'block');
+                }, 2500);
+            } else {
+                message = '<h4 class="failed-msg">'
+                    +'<i class="fa fa-times-circle" aria-hidden="true"></i>'
+                    +'Something goes wrong. Please, try again.</h4>'
+            }
+            $('.car-save').html(message);
+            $('.btn-save').css('display', 'none');
+        });
+    }
 }

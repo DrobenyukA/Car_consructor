@@ -16,13 +16,18 @@
     <header>
         <div class="row">
             <div class="small-6 medium-8 columns">
-                <h1>Автомобільний конструктор</h1>
+                <h1>
+                    Автомобільний
+                    <br class="hidden"/>
+                    конструктор
+                </h1>
             </div>
             <div class="small-6 medium-4 columns">
                 <div class="logo">
 
                 </div>
-                <a href="#" data-toggle="registration">Реєстрація</a>
+                <a href="#" class="register" data-toggle="registration">Реєстрація</a>
+                <div class="user hidden">Привіт, <span></span></div>
                 <div class="dropdown-pane"  id="registration" data-dropdown data-auto-focus="true">
                     <h5>Будь ласка заповніть необхідні поля</h5>
                     <label>Ім'я:</label>
@@ -31,12 +36,13 @@
                     <input type="text" name="lname" placeholder="Введіть Ваш прізвище"/>
                     <label>Електронна пошта</label>
                     <input type="email" name="email" placeholder="example@mail.com" onfocusout="UsersApp.isNewUser()"/>
+                    <span class="error email"></span>
                     <label>Пароль</label>
                     <input type="password" name="password" />
-                    <span class="error"></span>
+                    <span class="error password"></span>
                     <label>Підтвердження пароля</label>
                     <input type="password" name="confpassword" onfocusout="UsersApp.isSamePassword()" />
-                    <span class="error"></span>
+                    <span class="error password"></span>
                     <div class="button warning" onclick="alert('Please fill all fields')">Register</div>
                 </div>
             </div>
@@ -46,21 +52,21 @@
         <div class="row">
             <div class="columns small-8">
                 <div class="expanded button-group">
-                    <a href="#" class="success button">Про&nbsp;роботу</a>
                     <a href="http://uk.eurocar.com.ua/" class="success button">Skoda</a>
                     <a href="http://foundation.zurb.com/" class="success button">Foundation</a>
                     <a href="http://damoney.ru/bank/38_formula_annuitet.php" class="success button">Формула</a>
-                    <a href="#" class="success button">GitHub</a>
+                    <a href="https://github.com/DrobenyukA/Car_consructor" class="success button">GitHub</a>
                     <a href=""></a>
                 </div>
             </div>
-            <div class="columns small-4 login">
+            <div class="columns small-4">
                 <div class="expanded button-group">
-                    <a href="#" class="success button" data-toggle="login">Ввійти</a>
+                    <a href="#" class="login success button" data-toggle="login-form">Ввійти</a>
+                    <a href="#" class="logout success button hidden" onclick="UsersApp.logOut();">Вийти</a>
                 </div>
-                <div class="dropdown-pane" id="login" data-dropdown data-auto-focus="true">
+                <div class="dropdown-pane" id="login-form" data-dropdown data-auto-focus="true">
                     <h5>Введіть свої дані.</h5>
-                    <div class="login">
+                    <div class="login-form">
                         <label>Логін:</label>
                         <input type="email" name="login" placeholder="example@mail.com"/>
                         <label>Пароль</label>
@@ -152,7 +158,7 @@
                         </div>
                         <div class="interests hidden">
                             <label>Відсоткова ставка:</label>
-                            <span class="interest"></span>
+                            <span class="interest-input"></span>
                         </div>
                         <div class="primary callout credit-calc hidden">
                             <i class="fa fa-info" aria-hidden="true"></i>

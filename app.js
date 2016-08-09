@@ -7,7 +7,6 @@ var express     = require('express'),
     credit      = require('./models/BankConstructor.js'),
     creditCalc  = require('./models/CreditCalculator.js'),
     usersModule = require('./models/UsersModule'),
-    dataService = require('./services/DataService.js'),
     app         = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -55,10 +54,7 @@ app.post('/credit', function(req, res){
 });
 
 app.post('/savecar', function(req, res){
-    //TODO rewrite method to save car
-    var dbPath = './data/custom-cars.json';
-
-    res.send(dataService.saveData(dbPath, req.body));
+    res.send(car.saveCar(req.body));
 });
 
 app.post('/registered', function (req, res) {

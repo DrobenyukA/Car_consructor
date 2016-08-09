@@ -4,6 +4,7 @@
 
 var dataService = require('../services/DataService.js');
 
+
 module.exports = (function(){
 
     /**
@@ -92,12 +93,19 @@ module.exports = (function(){
         return result;
     };
     
+    var saveCar = function (params){
+        var dbPath = './data/custom-cars.json';
+        
+        return dataService.saveData(dbPath, params);
+    };
+    
     return{
         getModels:         getModels,
         getComplectations: getComplectations,
         getEngines:        getEngines,
         getColors:         getColors,
-        getOptions:        getOptions
+        getOptions:        getOptions,
+        saveCar:           saveCar
     }
     
 })();

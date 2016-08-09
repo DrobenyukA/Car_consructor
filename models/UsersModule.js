@@ -36,7 +36,6 @@ module.exports = (function (){
     
     var authenticate = function (guest){
         var user = [];
-        console.log(guest);
         for (var i = 0; i < data.length; i++){
             if (data[i].isCurrentUser(guest.email, guest.password)){
                 user.push(data[i]);

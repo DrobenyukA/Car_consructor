@@ -7,25 +7,37 @@ $(function (){
         
         var showUser = function (message){
             console.log('showUser from: ' + message);
+            hidePopups();
+            $('.login').addClass('hidden');
+            $('.logout').removeClass('hidden');
+            $('.register').addClass('hidden');
+            $('.user').removeClass('hidden');
+            setTimeout(function(){
+                var username = sessionStorage.getItem('user_name');
+                $('.user').html('Привіт, <span>' + username + '</span>');
+            }, 500);
+
         };
         
         var showGuest = function(message){
             console.log('showGuest from: ' + message);
+            $('.login').removeClass('hidden');
+            $('.logout').addClass('hidden');
+            $('.register').removeClass('hidden');
+            $('.user').addClass('hidden');
+            $('.user').html('');
         };
 
         var showFailureToLogin = function(message){
             console.log('showFailureToLogin from: ' + message);
-        };
-
-        var showFailureToRegister = function(message){
-            console.log('showFailureToRegister from: ' + message);
+            alert('Please enter valid data!');
         };
         
         var allowRegistration = function(){
             var login  = $('input[name="email"]').val(),
                 password = $('input[name="confpassword"]').val();
             if (login && password){
-                $('footer .button').attr('onclick', 'UsersApp.registered()');
+                $('#registration .button').attr('onclick', 'UsersApp.registered()');
             } else {
                 DeniRegistration();
             }
@@ -34,13 +46,17 @@ $(function (){
         
         var DeniRegistration = function (status) {
             switch (status){
-                case 1 : console.log('Email is already in use.');
+                case 1 : $('#registration .email').html('Email is already in use.');
                     break;
-                case 2: console.log('Please enter valid email.');
+                case 2: 
+                    $('#registration .email').html('Please enter valid email.');
+                    $('input[type="email"]').addClass('error');
                     break;
-                case 3: console.log('Passwords are not same.');
+                case 3:
+                    $('input[type="password"]').addClass('error');
+                    $('#registration .password').html('Passwords are not same.');
                     break;
-                default: $('footer .button').attr('onclick', 'alert("Please fill correct all fields")');
+                default: $('#registration .button').attr('onclick', 'alert("Please fill correct all fields")');
             }
             
         };
@@ -57,7 +73,6 @@ $(function (){
             showUser: showUser,
             showGuest: showGuest,
             showFailureToLogin: showFailureToLogin,
-            showFailureToRegister: showFailureToRegister,
             allowRegistration: allowRegistration,
             DeniRegistration: DeniRegistration,
             hidePopups: hidePopups

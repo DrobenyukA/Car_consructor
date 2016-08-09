@@ -35,7 +35,8 @@ $(function () {
                 }
             }).done(function (data) {
                 if (data){
-                    console.log('Registration was success!');
+                    UserView.hidePopups();
+                    alert('Registration was success!');
                     return;
                 }
                 return console.log('Failure to register. Something went wrong!');
@@ -99,7 +100,8 @@ $(function () {
                     }
                 }).done(function(data){
                     if (data){
-                        console.log('mail is valid');
+                        $('#registration .email').html('');
+                        $('input[type="email"]').removeClass('error');
                         return UserView.allowRegistration();
                     }
                     status = 1;
@@ -126,6 +128,8 @@ $(function () {
             
             if (password === confpassword){
                 UserView.allowRegistration();
+                $('input[type="password"]').removeClass('error');
+                $('#registration .password').html('');
             } else {
                 UserView.DeniRegistration(status);
             }

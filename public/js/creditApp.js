@@ -60,7 +60,7 @@ $(function(){
 
        var setInterest = function(interest){
            if(interest){
-               $('.interest').attr('data-id', interest[0].id)
+               $('.interest-input').attr('data-id', interest[0].id)
                    .html(interest[0].value);
            }
        };
