@@ -1,0 +1,28 @@
+{
+  "name": "car_constructor",
+  "version": "0.9.0",
+  "description": "Coursework of JavaScript course in IT Step Academy",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.0.0",
+    "body-parser": "^1.8.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrobenyukA/Car_consructor.git"
+  },
+  "keywords": [
+    "Coursework",
+    "JavaScript",
+    "Nodejs"
+  ],
+  "author": "Drobenyuk.A",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DrobenyukA/Car_consructor/issues"
+  },
+  "homepage": "https://github.com/DrobenyukA/Car_consructor#readme"
+}

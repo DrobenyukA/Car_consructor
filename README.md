@@ -1,4 +1,4 @@
-# Автомобільний конструктор _v 0.0.0_ ![skoda] (http://cc-cloud.skoda-auto.com/Content/Images/skoda-logo.png)
+# Автомобільний конструктор _v 0.9.0_ ![skoda] (http://cc-cloud.skoda-auto.com/Content/Images/skoda-logo.png)
 
 Курсова робота із курсу JavaScript КА "Шаг"
 

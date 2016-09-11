@@ -1,0 +1,197 @@
+body{
+    min-width:640px;
+}
+header{
+    padding-top: 1.75%;
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+header h1{
+    font-size: 38px;
+    font-weight: bold;
+}
+header .columns{
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    top: -28px;
+    left: 0;
+    width:155px;
+    height:124px;
+    background: url('../img/skoda-logo.png') no-repeat;
+}
+
+header a {
+    float: right;
+}
+
+.error{
+    color: red;
+}
+
+nav{
+    background-color: #41a821;
+}
+
+nav .button-group{
+    margin:0;
+}
+nav .login a {
+    float: right;
+}
+.main{
+    padding: 3% 0;
+}
+
+.main select{
+    outline-color: #41a821;
+}
+
+label{
+    font-weight: bold;
+}
+
+.hidden{
+    display: none!important;
+}
+
+.login h5,
+header h5{
+    font-weight: bold;
+    color: #41a821;
+}
+.login,
+.logout{
+    float: right;
+}
+
+.user{
+    float: right;
+}
+
+.user span{
+    display: block;
+}
+
+#car-constructor,
+#credit-calculator{
+    min-height: 25vh;
+}
+
+#car-constructor select[name="colors"] option span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+}
+
+#car-constructor .callout .button{
+    margin: 0;
+    color: #34861a;
+}
+
+h4{
+    text-align: center;
+}
+
+#price-js{
+    font-weight: bold;
+    letter-spacing:1px;
+}
+
+.success-msg{
+    color: #41A821;
+}
+
+.fa-info{
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+    font-size:25px;
+    color: #34861a;
+}
+
+.fa-floppy-o,
+.fa-times-circle{
+    margin-right: 15px;
+}
+
+#credit-calculator .interest-input{
+    display: block;
+    height: 2.4375rem;
+    padding: .5rem;
+    border: 1px solid #cacaca;
+    margin: 0 0 1rem;
+}
+
+.error{
+    display: block;
+    margin: 0 0 10px 0;
+    color: red;
+    font-style: italic;
+}
+
+input.error{
+    margin: 0;
+    border-color: red;
+}
+
+footer{
+    margin-top: 5vw;
+    padding: 3% 0;
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+}
+
+.dropdown-pane{
+    right: 5px;
+}
+
+h1 br.hidden{
+    display: none!important;
+}
+
+@media screen and (max-width: 991px) {
+    header h1 {
+        margin-top: 11px;
+        font-size: 30px;
+    }
+
+    .logo{
+        left: -42px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    h1 br.hidden{
+        display: block!important;
+    }
+
+    .logo{
+        top: 3px;
+        left: -85px;
+    }
+    .user {
+        margin-top: 30px;
+    }
+
+    footer {
+        margin-top: 15vw;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .logo{
+        top: 3px;
+        left: 20px;
+    }
+}
